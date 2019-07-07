@@ -1,0 +1,751 @@
+/* Main UIKit Theme Entry Point  */
+
+// 1. Your custom variables and variable overwrites.
+//$global-link-color: #DA7D02;
+$main-dark-bg-color:  #022F5E;
+$main-light-bg-color: #1960AB;
+$main-dark-text-color: white;
+$main-bg-color: white;
+
+//UIKit Global Variable overides
+$global-link-color: $main-dark-bg-color;
+$global-link-hover-color: darken($main-dark-bg-color,20%);
+$xs: 639;
+$s: 640;
+$m: 960;
+$l: 1200;
+$xl: 1600;
+
+//Thanks Tim Knight for the text below
+//https://medium.com/developing-with-sass/creating-a-dead-simple-sass-mixin-to-handle-responsive-breakpoints-889927b37740
+@mixin breakpoint($min: 0, $max: 0) {
+  $type: type-of($min);
+	@if $type == string {
+	  @if $min == xs {
+		@media (max-width: 639px) { @content; }
+	  }
+
+	  @else if $min == s {
+		@media (min-width: 640px) { @content; }
+	  }
+
+	  @else if $min == m {
+		@media (min-width: 960px) { @content; }
+	  }
+
+	  @else if $min == l {
+		@media (min-width: 1200px) { @content; }
+	  }
+	  @else if $min == xl {
+		@media (min-width: 1600px) { @content; }
+	  }
+
+	  @else {
+		@warn "Breakpoint mixin supports: xs, s, m, l, xl";
+	  }
+	}
+	@else if $type == number {
+	  $query: "all" !default;
+	  @if $min != 0 and $max != 0 { 
+		$query: "(min-width: #{$min}) and (max-width: #{$max})"; 
+	  }
+	  @else if $min != 0 and $max == 0 { 
+		$query: "(min-width: #{$min})"; 
+	  }
+	  @else if $min == 0 and $max != 0 { 
+		$query: "(max-width: #{$max})"; 
+	  }
+	  @media #{$query} { 
+		@content;
+	  }
+	}
+	@else {
+		@warn "Breakpoint Mixin can't find type";
+	}
+	
+}
+
+.uk-transition-slide-top {
+	background: rgba(0,0,0,0.0) !important;
+}
+.mobile-nav {
+	//That wasn't fun, it was something different
+	//height: 100vh !important;
+	z-index: 90;
+	
+	> div {
+		
+		background-image: url(../images/menu_bar.png);
+		background-repeat: repeat-x;
+		background-position: top;
+		background-size: contain;
+		div {
+			img {
+				position: relative;
+				top: 0px;
+				width: 64px;
+				height: 65px;
+			}
+		}
+	}
+}
+
+.uk-section {
+	
+	@include breakpoint(m) {
+		padding-left: 150px !important;
+	}
+}
+
+.the-story {
+	> div:last-child {
+		margin-bottom: 40px;
+	}
+}
+.header-extension {
+	background-color: $main-dark-bg-color;
+	//clip: auto;
+	height: 55px;
+	//width: 18px;
+}
+
+/*
+.header-extension:after {
+	//width: 1800px;
+	//height: 55px;
+}
+*/
+
+.about-text {
+	margin-top: 40px;
+}
+
+.about-text + img {
+	padding: 26px 0 0 0;
+	margin: 0 auto;
+}
+
+.about-header {
+	margin-top: 14px;
+}
+
+.about-header,
+.block-header {
+	background-color: $main-light-bg-color;
+	position: relative;
+	height: 55px;
+	h2 {
+		padding: 0 0 0 34px;
+		color: $main-dark-text-color;
+	}
+	
+}
+
+.about-header:before,
+.block-header:before  {
+	width: 28px;
+	height: 28px;
+	background-color: transparent;
+	content: '';
+	background-image: url(../images/untitled.png);
+	background-size: cover;
+	//background-position: 1 0;
+	position: absolute;
+	bottom: 0px;
+	
+	left: 0px;
+	//border-right: 14px solid $main-light-bg-color;
+	//border-top: 14px solid $main-light-bg-color;
+	//border-bottom: 14px solid white;
+	//border-left: 14px solid white;
+}
+
+.nav-bar {
+	background-color: $main-dark-bg-color;
+	left: 0px !important;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.nav-divider {
+	background-color: $main-dark-bg-color;
+	width: 38px;
+	height: 100%;
+}
+
+//try overiding cards later
+.about-cards {
+	background-color: $main-light-bg-color;
+	> div {
+		margin: 75px auto 75px auto !important;
+	}
+	div.css-flip {
+			padding-left: 0px !important;
+		}
+	div.css-flip {
+		//border: 2px solid black;
+		> div.flip {
+			//padding: 0 26px 0 26px !important;
+			> div {
+				border: 2px solid black;
+			}
+			.uk-card {
+				//position: relative;
+				//height: 110px;
+				
+				background-color: $main-bg-color;
+			}
+			
+		}
+	}
+}
+
+.css-flip {
+	perspective: 2500px;
+	
+	.flip.hover {
+		transform: rotateX(180deg);
+	}
+	.flip {
+		
+		cursor: pointer;
+		position: relative;
+		//left: 0px;
+		transition: .8s;
+		transform-style: preserve-3d;
+		
+		margin: 0 auto;
+		
+		padding: 0;
+		transform-origin: 100% 75px;
+		/*
+		&:hover {
+			transform: rotateX(-180deg);
+		}*/
+	}
+	
+	.front,
+	.back {
+		border: 1px solid darkgrey;
+		backface-visibility: hidden;
+		-webkit-backface-visibility: hidden;
+		-webkit-perspective: 0;
+		-webkit-transform: translate(0,0,0);
+		visibility: visible;
+		position: absolute;
+		top: 0;
+	}
+	
+	.front {
+		z-index: 2;
+		background-color: $main-dark-bg-color !important;
+		
+		text-align: center;
+		h3 {
+			color: white !important;
+		}
+		/* for firefox 31 */
+		transform: rotateX(0deg);
+		
+	}
+	
+	/* back, initialyy hidden pane */
+	.back {
+		transform: rotateX(180deg);
+		font-size: 14px;
+		
+		div {
+			padding-left: 20px !important;
+			padding-right: 20px !important;
+		}
+	}
+}
+
+.the-questist {
+	padding: 80px 0 80px 0;
+	
+	> div {
+		width: 80% !important;
+		margin-left: 0px !important;
+		> div {
+			padding: 60px !important;
+		}
+		> div:first-child {
+			text-align: center;
+			background-color: rgba(255,255,255,.6);
+			color: black;
+		}
+		> div:last-child {
+			text-align: center;
+			background-color: rgba(0,0,0,.6);
+			margin-top: 0px !important;
+			h3 {
+				margin-top: 0px !important;
+				color: white;
+			}
+			p {
+				color: white;
+			}
+			a {
+				color: complement($main-light-bg-color);
+				text-decoration: underline !important;
+			}
+			a:hover {
+				color: desaturate($main-light-bg-color,80%);
+				text-decoration: none !important;
+			}
+			@include breakpoint(m) {
+				//margin-top: 40px !important;
+			}
+		}
+	}
+}
+
+.the-portfolio {
+	div.the-info {
+	
+		padding-bottom: 40px;
+		padding-top: 40px;
+		
+		> div {
+			
+			> div:first-child {
+				background: none !important;
+				background-color: none !important;
+				@include breakpoint($min: 0, $max: $xl + px) {
+					ul.uk-tab::before {
+						border-bottom: 0px;
+					}
+					ul.uk-tab {
+						
+						margin: 0 auto;
+						padding-left: 0px;
+						background-color: $main-dark-bg-color;
+						li {
+							box-sizing: border-box;
+							padding-left: 0px;
+							background-color: $main-dark-bg-color;
+							
+							margin: 0 auto;
+							a {
+
+								color: $main-light-bg-color !important;
+								font-weight: bold;
+								padding: 20px 26px 20px 26px;
+							}
+						}
+						li.uk-active {
+							border-bottom: 3px solid $main-light-bg-color;
+							a {
+								color: white !important;
+								border-bottom: none;
+							}
+						}
+
+						li:hover {
+
+							background-color: $main-light-bg-color;
+
+							a:hover {
+
+								color: $main-dark-bg-color !important;
+							}
+						}
+					}
+				}
+				ul.uk-tab-left::before {
+					border-left: none;
+				}
+				ul.uk-tab-left {
+					background: none !important;
+					background-color: none !important;
+					
+					li {
+						box-sizing: border-box;
+						
+						background-color: $main-dark-bg-color;
+						width: 98%;
+						a {
+							
+							color: $main-light-bg-color !important;
+							font-weight: bold;
+							padding: 20px 16px 20px 26px;
+						}
+					}
+					li.uk-active {
+						border-right: 3px solid $main-light-bg-color;
+						a {
+							color: white !important;
+							
+						}
+					}
+					
+					li:hover {
+						
+						background-color: $main-light-bg-color;
+						
+						a:hover {
+							
+							color: $main-dark-bg-color !important;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.portfolio-description {
+	li {
+		div.tech-specs {
+			background-color: $main-light-bg-color;
+			padding: 40px 20px;
+			margin-left: 40px;
+			width: 80%;
+			color: white;
+			
+			h3 {
+				color: white !important;
+			}
+			
+			@include breakpoint(m) {
+				//position: relative;
+				//left: -175px;
+			}
+			@include breakpoint(xs) {
+				margin-right: 40px;
+			}
+		}
+	}
+}
+
+%padding-box {
+	padding-left: 40px;
+	padding-right: 40px;
+	color: white;
+}
+
+%padding-fix {
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}
+.the-positions {
+	margin-bottom: 40px;
+	@extend %padding-fix;
+	
+	.uk-tab::before {
+		border-bottom: none !important;
+	}
+	.uk-tab {
+		margin-bottom: 0px !important;
+		margin-left: 0px !important;
+		li {
+			padding-left: 0px;
+			
+		}
+		@include breakpoint(xs) {
+			a {
+				font-size: 10px !important;
+			}
+		}
+		.uk-active {
+		
+			border-color: $main-dark-bg-color !important;
+			border:none !important;
+			background-color: $main-dark-bg-color;
+			
+			a {
+				color: white;
+				background-color: $main-dark-bg-color !important;
+				border:none !important;
+			}
+		}
+	}
+	.position-grid {
+		@include breakpoint(m) {
+			> div:nth-child(2) {
+				padding-left: 0px !important;
+			}
+		}
+	}
+	.uk-switcher {
+		margin-top: 0px !important;
+		//background-color: $main-dark-bg-color;
+		
+		div.circle {
+			background-color: aqua;
+			width: 150px;
+			height: 150px;
+			top: -75px;
+			color: orangered;
+			
+			//masking code
+			
+			mask: url(#masking);
+			border-radius: 75px;
+			-moz-border-radius: 75px;
+			-webkit-border-radius: 75px;
+					
+			span {
+				line-height: 30px;
+				font-weight: bold;
+			}		
+		}
+		div.goals {
+			@extend %padding-box;
+			background-color: $main-dark-bg-color;
+			padding-bottom: 80px;
+			padding-top: 40px;
+		}
+		div.experience {
+				@extend %padding-box;
+				background-color: $main-light-bg-color;
+				padding-top: 80px;
+				padding-bottom: 40px;
+		}
+	}
+}
+
+.section-info {
+	margin: 20px 20px 20px 50px !important;
+	padding: 20px 40px 20px 40px !important;
+	text-align: center;
+	border: 1px solid $main-light-bg-color;
+}
+
+.the-projects {
+	padding: 40px 0 40px 0 !important;
+
+	.project-card-grid {
+		
+		margin-left: 0px !important;
+		
+		> div {
+			
+			padding-right: 40px;
+			padding-left: 40px;
+			
+			@include breakpoint(0, $l) {
+				padding-left: 0px !important;
+			}
+			
+			.uk-card {
+				background-color: $main-light-bg-color;
+				h3 {
+					color: white;
+				}
+				color: white;
+				> div:last-child {
+					background-color: $main-light-bg-color;
+				}
+			}
+		}
+	}
+}
+
+.ext-header {
+	background-color: $main-light-bg-color;
+	height: 27px;
+}
+// 2. Import default variables and available mixins.
+@import "variables-theme.scss";
+@import "mixins-theme.scss";
+
+// 3. Your custom mixin overwrites.
+//@mixin hook-card() { color: #000; }
+
+@mixin hook-base-h2(){
+	font-family: 'Anton', sans-serif;
+	font-size: 26pt;
+	font-weight: 600;
+}
+
+@mixin hook-base-body(){
+	font-family: 'Libre Franklin', sans-serif;
+	font-size: 14pt;
+}
+// 4. Import UIkit.
+//@import "../node_modules/uikit/src/scss/uikit-theme.scss";
+/******
+uikit theme import
+*****/
+// Base
+@import "theme/variables.scss";
+@import "theme/base.scss";
+
+// Elements
+@import "theme/link.scss";
+@import "theme/heading.scss";
+//@import "theme/divider.scss";
+//@import "theme/list.scss";
+//@import "theme/description-list.scss";
+//@import "theme/table.scss";
+@import "theme/icon.scss";
+//@import "theme/form-range.scss";
+//@import "theme/form.scss";
+@import "theme/button.scss";
+
+// Layout
+@import "theme/section.scss";
+@import "theme/container.scss";
+@import "theme/grid.scss";
+//@import "theme/tile.scss";
+@import "theme/card.scss";
+
+// Common
+@import "theme/close.scss";
+//@import "theme/spinner.scss";
+//@import "theme/marker.scss";
+@import "theme/totop.scss";
+//@import "theme/alert.scss";
+//@import "theme/badge.scss";
+//@import "theme/label.scss";
+@import "theme/overlay.scss";
+//@import "theme/article.scss";
+//@import "theme/comment.scss";
+//@import "theme/search.scss";
+
+// Navs
+@import "theme/nav.scss";
+@import "theme/navbar.scss";
+//@import "theme/subnav.scss";
+//@import "theme/breadcrumb.scss";
+//@import "theme/pagination.scss";
+@import "theme/tab.scss";
+@import "theme/slidenav.scss";
+//@import "theme/dotnav.scss";
+//@import "theme/thumbnav.scss";
+
+// JavaScript
+//@import "theme/accordion.scss";
+//@import "theme/drop.scss";
+//@import "theme/dropdown.scss";
+@import "theme/modal.scss";
+@import "theme/lightbox.scss";
+//@import "theme/sticky.scss";
+//@import "theme/offcanvas.scss";
+//@import "theme/leader.scss";
+
+// Additional
+@import "theme/iconnav.scss";
+//@import "theme/notification.scss";
+//@import "theme/tooltip.scss";
+//@import "theme/placeholder.scss";
+//@import "theme/progress.scss";
+//@import "theme/sortable.scss";
+//@import "theme/countdown.scss";
+
+// Utilities
+@import "theme/animation.scss";
+@import "theme/width.scss";
+@import "theme/height.scss";
+@import "theme/text.scss";
+@import "theme/column.scss";
+@import "theme/background.scss";
+@import "theme/align.scss";
+@import "theme/utility.scss";
+@import "theme/margin.scss";
+@import "theme/padding.scss";
+@import "theme/position.scss";
+@import "theme/transition.scss";
+//@import "theme/inverse.scss";
+
+
+/***
+UIKIT Components Imports
+****/
+
+// Base
+@import "components/variables.scss";
+@import "components/mixin.scss";
+@import "components/base.scss";
+
+// Elements
+@import "components/link.scss";
+@import "components/heading.scss";
+//@import "components/divider.scss";
+//@import "components/list.scss";
+//@import "components/description-list.scss";
+//@import "components/table.scss";
+@import "components/icon.scss";
+//@import "components/form-range.scss";
+//@import "components/form.scss"; // After: Icon, Form Range
+@import "components/button.scss";
+
+// Layout
+@import "components/section.scss";
+@import "components/container.scss";
+@import "components/grid.scss";
+//@import "components/tile.scss";
+@import "components/card.scss";
+
+// Common
+@import "components/close.scss"; // After: Icon
+//@import "components/spinner.scss"; // After: Icon
+@import "components/totop.scss"; // After: Icon
+//@import "components/marker.scss"; // After: Icon
+//@import "components/alert.scss"; // After: Close
+//@import "components/badge.scss";
+//@import "components/label.scss";
+@import "components/overlay.scss"; // After: Icon
+//@import "components/article.scss"; // After: Subnav
+//@import "components/comment.scss"; // After: Subnav
+//@import "components/search.scss"; // After: Icon
+
+// Navs
+@import "components/nav.scss";
+@import "components/navbar.scss"; // After: Card, Grid, Nav, Icon, Search
+@import "components/subnav.scss";
+//@import "components/breadcrumb.scss";
+//@import "components/pagination.scss";
+@import "components/tab.scss";
+//@import "components/slidenav.scss"; // After: Icon
+//@import "components/dotnav.scss";
+//@import "components/thumbnav.scss";
+
+// JavaScript
+//@import "components/accordion.scss";
+//@import "components/drop.scss"; // After: Card
+//@import "components/dropdown.scss"; // After: Card
+@import "components/modal.scss"; // After: Close
+@import "components/lightbox.scss"; // After: Close
+@import "components/slideshow.scss";
+//@import "components/slider.scss";
+//@import "components/sticky.scss";
+//@import "components/offcanvas.scss";
+@import "components/switcher.scss";
+//@import "components/leader.scss";
+// Scrollspy
+// Toggle
+// Scroll
+
+// Additional
+@import "components/iconnav.scss";
+//@import "components/notification.scss";
+//@import "components/tooltip.scss";
+//@import "components/placeholder.scss";
+//@import "components/progress.scss";
+//@import "components/sortable.scss";
+//@import "components/countdown.scss";
+
+// Utilities
+@import "components/animation.scss";
+@import "components/width.scss";
+@import "components/height.scss";
+@import "components/text.scss";
+@import "components/column.scss";
+@import "components/cover.scss";
+@import "components/background.scss";
+@import "components/align.scss";
+//@import "components/svg.scss";
+@import "components/utility.scss";
+@import "components/flex.scss"; // After: Utility
+@import "components/margin.scss";
+@import "components/padding.scss";
+@import "components/position.scss";
+@import "components/transition.scss";
+@import "components/visibility.scss";
+//@import "components/inverse.scss";
+
+// Need to be loaded last
+@import "components/print.scss";

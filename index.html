@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	
+	<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+	<title>Web Developer Rotimi A. located in SJ Bay Area</title>
+	<meta name="description" content="The website of Web Developer Rotimi A. created to showcase work and aid in his career search in the field."/>
+	<!-- Thanks to David Walsh at https://davidwalsh.name/cssflip for the help on the toggle. Kudos! -->
+	<script>
+		var lastItem = null;
+		function toggleCard(item) {
+			if(lastItem === item) {
+				item.classList.toggle("hover")
+				lastItem = null
+				return
+			}
+			if(lastItem === null) {
+				lastItem = item
+				item.classList.toggle("hover");	
+			}
+			else{
+				lastItem.classList.toggle("hover")
+				
+				item.classList.toggle("hover");
+				lastItem = item
+			}
+			//console.log(item.classList)
+		}
+		
+	</script>
+	<link rel="stylesheet" type="text/css" href="css/site.css"/>
+	<script src="js/uikit.min.js"></script>
+	
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122578081-3"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-122578081-3');
+	</script>
+
+</head>
+
+<body>
+	<div class="mobile-nav uk-position-fixed uk-width-1-1" uk-viewport-height>
+		<div class="uk-flex uk-flex-around uk-position-bottom uk-visible uk-hidden@m uk-width-1-1 uk-position-fixed">
+			<div class="">
+				
+				<a href="#about" uk-scroll><img data-src="images/menu_about.png" alt="" uk-img></a>
+			</div>
+			<div class="">
+				<a href="#positions" uk-scroll><img data-src="images/menu_positions.png" alt="" uk-img></a>
+			</div>
+			<div class="">
+				<a href="#portfolio" uk-scroll><img data-src="images/menu_portfolio.png" alt="" uk-img></a>
+			</div>
+			<div class="">
+				<a href="#projects" uk-scroll><img data-src="images/menu_projects.png" alt="" uk-img></a>
+			</div>
+			<div class="">
+				<a href="#words" uk-scroll><img data-src="images/menu_words.png" alt="" uk-img></a>
+			</div>
+		</div>
+	</div>
+	<div class="uk-width-small uk-position-fixed uk-visible@m fixed-bar" uk-height-viewport>
+						<div class="uk-position-fixed uk-height-1-1 nav-bar">
+							<div class="nav-about">
+								<a href="#about" uk-scroll><img data-src="images/about.png" width="150" height="150" alt="About" uk-img></a>
+							</div>
+							<div class="nav-resume">
+								<a href="#positions" uk-scroll><img data-src="images/positions.png" width="150" height="150" alt="About" uk-img></a>
+							</div>
+							<div class="nav-portfolio">
+								<a href="#portfolio" uk-scroll><img data-src="images/portfolio.png" width="150" height="150" alt="About" uk-img></a>
+							</div>
+							<div class="nav-projects">
+								<a href="#projects" uk-scroll><img data-src="images/projects.png" width="150" height="150" alt="About" uk-img></a>
+							</div>
+							<div class="nav-words">
+								<a href="#words" uk-scroll><img data-src="images/words.png" width="150" height="150" alt="About" uk-img></a>
+							</div>
+						</div>
+					</div>
+	
+		<span id="about"></span>
+	<div class="uk-section uk-width-1-1">
+
+		<div class="uk-container">
+			<div class="uk-grid-large uk-child-width-1-2@m uk-child-width-1-1@s uk-flex-center the-story" uk-grid>
+				<div class="uk-flex-last@m">
+					<img src="images/RotimiCreativeLogo.png" alt="Rotimi Creative Logo">
+					<div class="about-header"><h2 class="uk-position-center-left">About</h2></div>
+					<p class="about-text">Howdy, this website is to showcase Rotimi's projects and support his job search as he continues to build his software development portfolio. This includes his current client work, possible career avenues and a blog of writing regarding various subjects related to technology and other ideas. He also is active in the world off-the-web. He hosts and attends a few meetup groups. He has also partnered with other developers and designers in the SF Bay Area.</p>
+					<div style="text-align: center"><img data-src="images/photo1.jpg" alt="Rotimi's Photo" uk-img></div>
+				</div>
+				<div class="">
+					<p class="about-text">
+					<h2>Rotimi's Story</h2>
+					Recently receiving a Bachelor's degree in June 2018 from University of California Santa Cruz in Cognitive Science was a major achievement. It was important to work towards a multidisciplinary degree in order to explore all my interests. The main focus of the degree was a mix of Computer Science and Psychology. At Foothill community college I also had exposure to Accounting and Business classes. I didn't completely expect to get a degree although both my parents are teachers. My first job out of high school was doing carpet installation and I later supported myself through self-employment selling used computers and started a skateboard deck company because skateboarding was something I was passionate about as a teenager. However, I soon realized it was not realistic to do so without distribution. I have always been interested in blazing my own trail which is one of the things that drew me to work with technology. Building something and tinkering with different software tools. Good design is as important in coding as it is with web design. I believe digital products should serve to benefit the world rather than detract from it. An example of this is supporting brick and mortar stores to become established on the web or helping artists, writers and musicians with their web presence. I have had some success in fulfilling those goals through freelancing and I am still the webmaster of a few websites created for clients who work in the arts. I would like to transition into a role at a company that supports the web infrastructure such as a SAAS startup but I also know that since I am starting to explore my career options I will be looking for other opportunities in other industries as well. I also want to thank his dog Nea for never getting tired of greeting him when I come home from work.</p>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="uk-container uk-width-1-1 about-cards">
+
+			<div class="uk-flex-middle uk-flex-center uk-child-width-1-3@l uk-child-width-1-1@m" uk-grid>
+				<div class="css-flip uk-flex uk-flex-center uk-height-small">
+					<div class="flip uk-flex uk-width-4-5" onclick="toggleCard(this);">
+						<div class="front uk-card uk-width-1-1 uk-height-small uk-card-body">
+							<h3 class="uk-card-title uk-position-center">Why this Site</h3>
+
+						</div>
+						<div class="back uk-card uk-width-1-1 uk-height-small">
+							<div class="uk-position-center">This site is dedicated to helping Rotimi find a full-time position related to technology.
+							Although, he is willing to explore other career options.</div>
+
+						</div>
+					</div>
+				</div>
+				<div class="css-flip uk-flex uk-flex-center uk-height-small" >
+					<div class="flip uk-flex uk-width-4-5" onclick="toggleCard(this)">
+						<div class="front uk-card uk-width-1-1 uk-height-small uk-card-body">
+							<h3 class="uk-card-title uk-position-center">Welcome</h3>
+
+						</div>
+						<div class="back uk-card uk-width-1-1 uk-height-small">
+							<div class="uk-position-center">This is not just a hobby. Rotimi is a dedicated designer and developer. But as with the future, it is in the making.</div>
+
+						</div>
+					</div>
+				</div>
+				<div class="css-flip uk-flex uk-flex-center uk-height-small">
+					<div class="flip uk-flex uk-width-4-5" onclick="toggleCard(this)">
+						<div class="front uk-card uk-width-1-1 uk-height-small uk-card-body">
+							<h3 class="uk-card-title uk-position-center">Some Expectations</h3>
+
+						</div>
+						<div class="back uk-card uk-width-1-1 uk-height-small">
+							<div class="uk-position-center">Please have an open-mind. This site was built to share some of Rotimi's interests, activities and career. Hopefully, you will find something of value to you.</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="uk-container the-questist uk-width-1-1 uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-dark" data-src="images/windy-road.jpg" uk-img>
+			<div class="uk-grid-large uk-child-width-1-2@l uk-child-width-1-1@m uk-flex-center" uk-grid>
+				<div class="left-q-info" uk-scrollspy="cls: uk-animation-slide-left; repeat: false; delay: 150">
+					<img class="uk-padding-small" data-src="images/questist-logo-transparent.png" alt="About" uk-img><br/>
+					I currently work on website development consulting through Questist LLC. I work with an extended group of engineers, designers and videographers to support multiple clients. Currently, I am revamping the Questist website to focus a larger breadth of work and related ongoing projects that could help the company pivot into a startup. As a recent college graduate, I would like to be able to explore his career opportunities and interests, which is why the current site you are visiting was created.<br>
+				</div>
+				<div class="right-q-info" uk-scrollspy="cls: uk-animation-slide-right; repeat: false; delay: 150">
+					<img class="uk-inline" data-src="images/custom-white-arrow.png" width="75" height="75" alt="arrow" uk-img>
+					<h3 class="uk-inline">
+					Web Design<br/>
+					Video Production<br/>
+					Social Media Marketing<br/>
+					SEO & Google AdWords<br/>
+					Mobile UI<br/>
+					UX Design<br/>
+					</h3>
+					<p>The Questist website is currently undertaking a major overhaul while I look for full time work in the field. Currently, I am booked with a large project, if you would like to inquire about a development project contact our partners at <a href="https://www.jamiitech.com">Jamii Tech</a></p>
+				</div>
+			</div>
+		</div>
+		<span id="positions"></span>
+		<div class="uk-container the-positions uk-width-1-1">
+			<div class="uk-grid-large uk-child-width-1-2" uk-grid>
+				<div class="ext-header">
+					&nbsp;
+				</div>
+				<div class="block-header uk-inline">
+					<h2 class="uk-position-center-left">Positions</h2>
+				</div>
+			</div>
+
+
+			<div class="uk-flex uk-flex-middle uk-flex-center" uk-grid>
+				<div class="section-info uk-width-1-1@m uk-width-1-2@l" uk-scrollspy="cls:uk-animation-fade">
+					This includes a goals statement in cover letter styling to better describe possible positions and qualifications that may be forthcoming in describing my ability to fill a position within your company or agency. I graduated from the University of California, Santa Cruz with a focus on Human-Computer Interaction in June 2018.
+				</div>
+				<div class="position-grid uk-grid-large uk-flex uk-flex-center uk-width-1-1" uk-grid>
+
+					<svg width="0" height= "0">
+						<defs>
+							<mask id="masking" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+								<circle cx=".5" cy=".5" r=".4" fill="white" />
+							</mask>
+						</defs>
+					</svg>
+
+					<div class="uk-width-1-1 uk-width-4-5@m">
+						<ul class="uk-child-width-expand" uk-tab>
+							<li class="uk-active"><a href="#">Web Developer</a></li>
+							<li><a href="#">UX Designer</a></li>
+							<li><a href="#">Product Designer</a></li>
+							<li><a href="#">Customer Support</a></li>
+						</ul>
+						<ul class="uk-switcher uk-margin">
+							<li>
+								<div class="">
+
+									<div class="goals">
+									  I am a Web Developer who understands back-end and front-end development. I am currently working on learning Front-End Development using Vuejs. My focus is currently on Front-End development through becoming more proficient in Javascript. I would like to explore Back-End technologies through Node.js, Python or Ruby to become a Full-Stack Developer. Also, C# and ASP further in the future since it is closer to my past experience with C++. The current state of a thriving community of developers and frameworks is interesting to me because there is always something fresh and new to apply to solve common problems. I have an eye for design and will be contributing some prototypes of mobile and websites to Behance and Dribble in the future. I am also planning to develop some simple free website theme's in the near future.
+									</div>
+
+									<div class="experience uk-inline">
+										<div class="circle uk-position-top-center uk-inline"><span class="uk-position-center uk-text-center">GOALS<br>EXP.</span></div>
+										I believe I have an aptitude for coding and do enjoy the process. Originally, I learned OOP programming using C++. It has helped me be able to quickly adopt new things. For example, I quickly learned CodeIgniter a PHP MVC and developed a dashboard for a customers portfolio site and have worked with other frameworks applying them to solve specific problems. I have been the lead on several small projects and I am an effective self-starter who does not shy away from a problem. I maybe spend too much time evaluating different tools but find the activity of learning about the different software tools available in the web landscape interesting. This experience should translate well to working on larger projects.
+									</div>
+								</div>
+						  </li>
+							<li>
+								<div class="">
+
+									<div class="goals">
+									  My main goal is to pursue a career in UX Design with a team that includes engineers and designers. That way I will be able to focus my efforts on User Experience and apply qualitative and quantitative methods gained from my education. It is a career change from what I am currently doing and I am making strides in order to ensure the transition will be successful. I have been working on designing a small mobile app and conducting my own research including interviews with real users. The best way to learn is by doing, so I will be producing supporting documentation and User Experience case studies for that project as well as supplementary projects. I hope to have some related prototypes on Behance and Dribble by the end of the year.
+									</div>
+
+									<div class="experience uk-inline">
+										<div class="circle uk-position-top-center uk-inline"><span class="uk-position-center uk-text-center">GOALS<br>EXP.</span></div>
+										My Degree in Cognitive Science with a Focus in HCI should prepare me for a position as a UX Designer. Many of my classmates were hired in the field by top companies. My experience with Web Development should help me become proficient at the position quickly. I also took classes in Statistics and Research Methods were I developed experiments and completed a research project which was based on behavioural studies. This experience in Psychology is important in UX Design because it is important to understand how people think, act and react. While this is only one aspect, being aware of common practices and as someone who is passionate about technology will be helpful. Additionally, I feel I am able to emphasize with stakeholders and customers.
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="">
+
+									<div class="goals">
+										While I have not worked for an established corporation with large-scale products I come from a business and entrepreneurial background and can understand various stakeholders motivations. Since I am able to communicate effectively and have technical knowledge I will be able to apply myself to understanding the companies products and business goals for those products. I will apply that directly to help build products that better meet the market need. Additionally, I will be a team member that is able to see the value in others work which will hopefully help by reducing friction and to allow the company to seize the opportunities that arise from their current standing in the marketplace.
+									</div>
+
+									<div class="experience uk-inline">
+										<div class="circle uk-position-top-center uk-inline"><span class="uk-position-center uk-text-center">GOALS<br>EXP.</span></div>
+										I have been researching technology products for some time. Considering features and standing in the business climate. Some of the ideas I have come up with have been implemented in successful business models much later. I don't consider these "I should have done it" moments. It is only validating that there is a process behind each product or service that is implemented successfully. Today there is a difference between a Technologist and a Futurist,  the later is a visionary and the former accesses the viability of current trends and applies them to solve a current market need.
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="">
+
+									<div class="goals">
+									  Customer Support would be a role where I would be the first point of contact for supporting a companies products with direct interaction with customers. This is a technical Support role where I would take the opportunity to learn the in's and out's of the companies products or services in order to provide stellar support. Hopefully, this would also allow me to be in contact with Engineer's and Designer's so that I can better fulfil the role. The product or service does not have to be a technology product it could be any support role.
+									</div>
+
+									<div class="experience uk-inline">
+										<div class="circle uk-position-top-center uk-inline"><span class="uk-position-center uk-text-center">GOALS<br>EXP.</span></div>
+										My current role as Freelance Developer is a customer facing role where I have been the lead on technical projects. This includes developing specification's and applying them to the technology used. I can easily develop a professional relationship with clients. Since I have technical aptitude and experience communicating this to client's it will greatly help the efficiency of the customer interaction's whether it be by email, over the phone or in person. I am friendly, amiable and patient. This personality helps him build rapport with customers and maintain a professional attitude at all times, especially when the customer is relying on me as a representative of the value of a product. I have proven experience performing in such situations and helping build customer loyalty.
+									</div>
+								</div>
+
+							</li>
+						</ul>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<span id="portfolio"></span>
+		<div class="uk-containter the-portfolio uk-width-1-1">
+			<div class="uk-grid-large uk-child-width-1-2" uk-grid>
+				<div class="ext-header">
+					&nbsp;
+				</div>
+				<div class="block-header uk-inline">
+					<h2 class="uk-position-center-left">Portfolio</h2>
+				</div>
+			</div>
+			<div class="uk-flex uk-flex-middle uk-flex-center" uk-grid>
+				<div class="section-info uk-width-1-1@m uk-width-1-2@l" uk-scrollspy="cls:uk-animation-fade; delay: 200">
+						The portfolio includes a list of currently live websites that I have worked on for customers. This is not an exhaustive list, there have been many sites that were temporary or no longer online for various reasons. I started web designing part-time in 2013 and full-time after graduating college in June 2018.
+				</div>
+			</div>
+			<div class="uk-container uk-width-1-1 the-info">
+				<div class="uk-grid-large uk-flex uk-flex-center" uk-grid>
+					<div class="uk-width-2-4@s uk-width-2-5@m uk-width-4-5@l uk-width-1-5@xl">
+						<ul class="uk-tab-left" uk-switcher="connect: .portfolio-description; animation: uk-animation-slide-left-medium" uk-tab="media: @xl">
+							<li class="uk-active"><a href="#">Bruce C. Stevenson</a></li>
+							<li><a href="#">SV Family Therapy</a></li>
+							<li><a href="#">Judy G</a></li>
+							<li><a href="#">Viral Media Network</a></li>
+						</ul>
+					</div>
+					<div class="uk-width-2-4@s uk-width-1-1@m uk-width-2-5@l uk-width-3-5@xl">
+						<ul class="portfolio-description uk-switcher">
+							<li>
+
+								<div class="">
+									<div class="uk-width-expand">
+										<h3>Musician Bruce C. Stevenson's Website</h3>
+										<h4>About the Project</h4>
+										<div>
+											Bruce C. Stevenson had a website already, however, his marketer wanted to create a new design for the upcoming EP release and they also needed a new developer to manage it day to day. Since Bruce is a Musician and had his own specific aesthetic's in mind such as a Monochrome palette with bright colors interspersed to catch the eye, this was the perfect opportunity to offer a custom web design solution. I showed him a prototype and he loved it, and since he knew how he wanted it to look, the minor changes we made were easy to define. I also handled the blog and will be updating it monthly with music news with the help of one of his associates.
+
+										</div>
+										<h4>The Solution</h4>
+										<div>
+											Because the site had a Blog as the main dynamic portion we opted for a custom Wordpress theme built from a Vanilla Twenty-Sixteen theme. The content was already created but the layout was drastically different from his original site. Instead of using Bootstrap for responsive functionality I opted for UIKit to change the flavour of the development process.
+										</div>
+										<h4>Link</h4>
+										<div>
+											<a href="http://www.brucecstevenson.com">www.brucecstevenson.com</a>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+
+								<div class="">
+
+									<div class="uk-width-expand">
+										<h3>SV Family Therapy</h3>
+										<h4>About the Project</h4>
+										<div>
+											I was pleased to do this website for Mindy Dirks PhD. She had only the images for the site ready, knowing that she wanted to stick with a theme of "hands". She left the rest up to me. I created three different prototypes. One with a multi-page design and two single page variations. She decided she liked the single page designs better. After developing and coding there were a few minor changes to be made. She was very pleased with the outcome and left me a great review on Thumbtack.
+
+										</div>
+										<h4>The Solution</h4>
+										<div>
+											I used Bootstrap because it is perfect for one-page responsive designs. We only needed the grid system because the other UI elements such as the fly-in image overlays were custom coded. The colors were chosen from a three-color palette with bright accents to appeal to families and children. In the future, we may be adding dynamic content to the site including some of Mindy's writing on subjects within family Psychology.
+										</div>
+										<h4>Link</h4>
+										<div>
+											<a href="http://www.svfamilytherapy.com">www.svfamilytherapy.com</a>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+
+								<div class="">
+
+									<div class="uk-width-expand">
+										<h3>Judy Gittelsohn - Artist Website</h3>
+										<h4>About the Project</h4>
+										<div>
+											Judy was one of the first clients I worked with on web development. She wanted a site that would allow her to manage her art herself. Because she was active in the Palo Alto art scene with exhibitions going on regularly and had collector's willing to give her social proofing we decided to emphasize that on her website. The art portfolio was built to link the exhibitions and collectors together allowing people to see which art pieces were on display at any given time.
+
+										</div>
+										<h4>The Solution</h4>
+										<div>
+											I choose Couch CMS to use for the development of the site. It offered a tight integration between the backend data and the HTML allowing us to build the design in HTML and add tags which pulled in the data. The dashboard is fully customizable and easy to use allowing Judy to manage it herself. This project was released before Wordpress had the Gallery feature built in which may have changed the decision. None the less, it was a solid choice because the site was up and running in a week. I integrated bootstrap into the website for responsive functionality.
+										</div>
+										<h4>Link</h4>
+										<div>
+											<a href="http://www.judyg.com">www.judyg.com</a>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+
+								<div class="">
+
+									<div class="uk-width-expand">
+										<h3>Viral Media Network Portfolio</h3>
+										<h4>About the Project</h4>
+										<div>
+											My long-time friend Sam Jack works with a network of Videographers and Actors. He has produced his own talk show as well as worked with Major Sports Leagues like the A's, 49ers and Giants. His company Viral Media Network had need of a new website and also had a new client, Charles Blades Barber Shop who wanted us to write their monthly blogroll on Men's Fashion and Grooming tips. I signed on to write the blog and redesign the website.
+
+										</div>
+										<h4>The Solution</h4>
+										<div>
+											This was a simple theme build with some custom UI design for the services and team pages. Sam already had a theme picked out and I imported the content from another blogging platform into the Wordpress theme. I collaborated with Sam on the custom UI elements and implemented them using jQuery.
+										</div>
+										<h4>Link</h4>
+										<div>
+											<a href="http://www.viralmedianetwork.com">www.viralmedianetwork.com</a>
+										</div>
+									</div>
+								</div>
+							</li>
+							
+						</ul>
+					</div>
+					<div class="uk-width-2-4@s uk-width-2-5@m uk-width-2-5@l uk-width-1-5@xl">
+						<ul class="portfolio-description uk-switcher">
+							<li class="uk-flex uk-flex-center">
+								<div class="tech-specs">
+									<div class="">
+										<h3>Tech Overview</h3>
+										HTML<br>
+										CSS<br>
+										LESS<br/>
+										jQuery<br>
+										UIKit<br>
+										Wordpress<br>
+										PHP
+									</div>
+
+								</div>
+							</li>
+							<li class="uk-flex uk-flex-center">
+								<div class="tech-specs">
+									<div class="">
+										<h3>Tech Overview</h3>
+										HTML<br>
+										CSS<br>
+										SASS<br/>
+										jQuery<br>
+										Bootstrap<br>
+									</div>
+
+								</div>
+							</li>
+							<li class="uk-flex uk-flex-center">
+								<div class="tech-specs">
+									<div class="">
+										<h3>Tech Overview</h3>
+										HTML<br>
+										CSS<br>
+										SASS<br/>
+										jQuery<br>
+										Bootstrap<br>
+										CouchCMS<br>
+									</div>
+
+								</div>
+							</li>
+							<li class="uk-flex uk-flex-center">
+								<div class="tech-specs">
+									<div class="">
+										<h3>Tech Overview</h3>
+										HTML<br>
+										CSS<br>
+										jQuery<br>
+										Wordpress<br>
+									</div>
+
+								</div>
+							</li>
+							
+						</ul>
+					</div>
+
+					<div class="uk-contiainer uk-width-1-1">
+						<ul class="portfolio-description uk-switcher">
+							<li>
+								<div class="uk-container uk-width-1-1 uk-flex uk-flex-middle uk-flex-center the-portfolio-images" >
+									<div class="uk-grid-small uk-child-width-1-4@xl uk-child-width-1-3@l uk-child-width-1-2@m uk-child-width-1-2@s" uk-lightbox="animation: slide" uk-grid="masonry:true">
+										<div>
+											<a href="images/portfolio/bruce-1-thumb.jpg" data-caption="Bruce Stevensons Homepage">
+												<img data-src="images/portfolio/bruce-1.jpg" alt="Bruce Stevensons homepage" uk-img>
+											</a>
+										</div>
+										<div>
+											<a href="images/portfolio/bruce-2-thumb.jpg" data-caption="Bruce Stevensons Discography">
+												<img data-src="images/portfolio/bruce-2.jpg" alt="Bruce Stevensons Discography" uk-img>
+											</a>
+										</div>
+										<div>
+											<a href="images/portfolio/Bruce-3-thumb.jpg" data-caption="Bruce Stevensons Blog">
+												<img data-src="images/portfolio/Bruce-3.jpg" alt="Bruce Stevensons Blog" uk-img>
+											</a>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="uk-container uk-width-1-1 uk-flex uk-flex-middle uk-flex-center the-portfolio-images" >
+									<div class="uk-grid-small uk-child-width-1-4@xl uk-child-width-1-3@l uk-child-width-1-2@m uk-child-width-1-2@s" uk-lightbox="animation: slide" uk-grid="masonry:true">
+										<div>
+											<a href="images/portfolio/mindy-dirks-thumb.jpg" data-caption="Mindy Dirks One Page Site">
+												<img data-src="images/portfolio/mindy-dirks.jpg" alt="Mindy Dirks One Page Site" uk-img>
+											</a>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="uk-container uk-width-1-1 uk-flex uk-flex-middle uk-flex-center the-portfolio-images" >
+									<div class="uk-grid-small uk-child-width-1-4@xl uk-child-width-1-3@l uk-child-width-1-2@m uk-child-width-1-2@s" uk-lightbox="animation: slide" uk-grid="masonry:true">
+										<div>
+											<a href="images/portfolio/judyg-1-thumb.jpg" data-caption="Judy Gittelsohns Homepage">
+												<img data-src="images/portfolio/judyg-1.jpg" alt="Judy Gittelsohns homepage" uk-img>
+											</a>
+										</div>
+										<div>
+											<a href="images/portfolio/judyg-2-thumb.jpg" data-caption="Judy Gittelsohns Art Portfolio">
+												<img data-src="images/portfolio/judyg-2.jpg" alt="Judy Gittlsohns Art Portfolio" uk-img>
+											</a>
+										</div>
+										<div>
+											<a href="images/portfolio/judyg-3-thumb.jpg" data-caption="Judy Gittelsohns In Situ">
+												<img data-src="images/portfolio/judyg-3.jpg" alt="Judy Gittelsohns In Situ" uk-img>
+											</a>
+										</div>
+										<div>
+											<a href="images/portfolio/judyg-4-thumb.jpg" data-caption="Judy Gittelsohns Pet Portraits">
+												<img data-src="images/portfolio/judyg-4.jpg" alt="Judy Gittelsohns Pet Portraits" uk-img>
+											</a>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="uk-container uk-width-1-1 uk-flex uk-flex-middle uk-flex-center the-portfolio-images" >
+									<div class="uk-grid-small uk-child-width-1-4@xl uk-child-width-1-3@l uk-child-width-1-2@m uk-child-width-1-2@s" uk-lightbox="animation: slide" uk-grid="masonry:true">
+										<div>
+											<a href="images/portfolio/viral-1-thumb.jpg" data-caption="Viral Media Network Homepage">
+												<img data-src="images/portfolio/viral-1.jpg" alt="Viral Media Network homepage" uk-img>
+											</a>
+										</div>
+										<div>
+											<a href="images/portfolio/viral-2-thumb.jpg" data-caption="Viral Media Network Services">
+												<img data-src="images/portfolio/viral-2.jpg" alt="Viral Media Network Services" uk-img>
+											</a>
+										</div>
+										<div>
+											<a href="images/portfolio/viral-3-thumb.jpg" data-caption="Viral Media Network Blog">
+												<img data-src="images/portfolio/viral-3.jpg" alt="Viral Media Network Blog" uk-img>
+											</a>
+										</div>
+
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="uk-container uk-width-1-1 uk-flex uk-flex-middle uk-flex-center the-portfolio-images" >
+									<div class="uk-grid-small uk-child-width-1-4@xl uk-child-width-1-3@l uk-child-width-1-2@m uk-child-width-1-2@s" uk-lightbox="animation: slide" uk-grid="masonry:true">
+										<div>
+											<a href="images/portfolio/jweston-1.jpg" data-caption="Jacques Westons Homepage">
+												<img data-src="images/portfolio/jweston-1.jpg" alt="Jacques Westons homepage" uk-img>
+											</a>
+										</div>
+										<div>
+											<a href="images/portfolio/jweston-2.jpg" data-caption="Jacques Westons Sermons">
+												<img data-src="images/portfolio/jweston-2.jpg" alt="Jacques Westons Sermons" uk-img>
+											</a>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<span id="projects"></span>
+		<div class="uk-container the-projects uk-width-1-1">
+			<div class="uk-grid-large uk-child-width-1-2" uk-grid>
+				<div class="ext-header">
+					&nbsp;
+				</div>
+				<div class="block-header uk-inline">
+					<h2 class="uk-position-center-left">Projects</h2>
+				</div>
+			</div>
+
+
+			<div class="uk-flex uk-flex-middle uk-flex-center" uk-grid>
+				<div class="section-info uk-width-1-1@m uk-width-1-2@l" uk-scrollspy="cls:uk-animation-fade; delay: 200">
+					Here is a list of current and ongoing projects that I am involved with. Some of these are in the community and other's are more technology related. Past projects are for now included here but will be moved to a category in the word's section in the future.
+				</div>
+
+			</div>
+			<div class="project-card-grid uk-grid-large uk-flex uk-flex-center uk-width-1-1" uk-grid>
+				<div class="uk-width-4-5@l">
+					<div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@m uk-margin" uk-grid>
+						<div class="uk-card-media-left uk-cover-container" uk-scrollspy="cls:uk-animation-scale-up; delay: 300">
+							<img src="images/adapt-this-meetup.jpg" alt="Adapt This SWx2 Meetup" uk-cover>
+							<canvas width="600" height="400"></canvas>
+						</div>
+						<div>
+							<div class="uk-card-body">
+								<h3 class="uk-card-title">Adapt This! SWx2 Meetup</h3>
+								<p>SWx2 stands for Spoken Word and Short Works such as short stories, poetry or spoken word of any genre and style. This meetup focuses on the member's being able to contribute to each others growth as writer's.
+									We encourage member's to share the prose they write during the group and also have a meeting with a Workshop style format where we share thing's we have learned about writing.
+								If you are in the Palo Alto, California area you can <a href="http://meetu.ps/c/40rVG/9zJjW/f">sign up to join on Meetup.com</a></p>
+							</div>
+						</div>
+					</div>
+
+					<div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@m uk-margin" uk-grid>
+						<div class="uk-flex-last@m uk-card-media-right uk-cover-container" uk-scrollspy="cls:uk-animation-scale-up; delay: 300">
+							<img src="images/palo-alto-meetup.jpg" alt="Palo Alto Web Design Meetup" uk-cover>
+							<canvas width="600" height="400"></canvas>
+						</div>
+						<div>
+							<div class="uk-card-body">
+								<h3 class="uk-card-title">Palo Alto Web Design Meetup</h3>
+								<p>This meetup is a monthly meetup with an open format. Rotimi is the Organizer and help's facilitate each meeting. Most meeting's he prepares a short presentation on something tech related
+								but he also encourages members to share as well. Member's can share thing's like some code they learned that week, a tech new's item or more opinionated matter's such as favorite framework or language. If you are in the Palo Alto, California area you can <a href="http://meetu.ps/c/40tDZ/9zJjW/f">sign up to join on Meetup.com</a></p>
+							</div>
+						</div>
+					</div>
+
+					<div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@m uk-margin" uk-grid>
+						<div class="uk-card-media-left uk-cover-container" uk-scrollspy="cls:uk-animation-scale-up; delay: 300">
+							<img src="images/splash-review-site.jpg" alt="Adapt This Review Site" uk-cover>
+							<canvas width="600" height="400"></canvas>
+						</div>
+						<div>
+							<div class="uk-card-body">
+								<h3 class="uk-card-title">Adapt This Blog</h3>
+
+								<p>I worked with a few other writers to create a blog based on reviewing book to film adaptations. The blog was a personal not for profit site. It started with a more serious tone through the voices of it's authors. However, I found that adding some humor helped make the reviews easier to write and the content more cohesive especially on social media. I started including tongue in cheek references and memes. I lost interest in the project shortly therafter but would like to work on a similar project in the future. If you are interested in the subject, <a href="http://www.adaptthat.com">AdaptThat</a> is a similar site that is currently being regularly maintained periodically.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<span id="words"></span>
+		<div class="uk-container the-positions uk-width-1-1">
+			<div class="uk-grid-large uk-child-width-1-2" uk-grid>
+				<div class="ext-header">
+					&nbsp;
+				</div>
+				<div class="block-header uk-inline">
+					<h2 class="uk-position-center-left">Words</h2>
+				</div>
+			</div>
+
+
+			<div class="uk-flex uk-flex-middle uk-flex-center" uk-grid>
+				<div class="section-info uk-width-1-1@m uk-width-1-2@l" uk-scrollspy="cls:uk-animation-fade">
+					The Blog is currently in development. I am evaluating using something other than Wordpress...
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>
