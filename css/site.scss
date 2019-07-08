@@ -47,13 +47,13 @@ $xl: 1600;
 	@else if $type == number {
 	  $query: "all" !default;
 	  @if $min != 0 and $max != 0 { 
-		$query: "(min-width: #{$min}) and (max-width: #{$max})"; 
+		$query: "only screen and (min-width: #{$min}px) and (max-width: #{$max}px)"; 
 	  }
 	  @else if $min != 0 and $max == 0 { 
-		$query: "(min-width: #{$min})"; 
+		$query: "only screen and (min-width: #{$min}px)"; 
 	  }
 	  @else if $min == 0 and $max != 0 { 
-		$query: "(max-width: #{$max})"; 
+		$query: "only screen and (max-width: #{$max}px)"; 
 	  }
 	  @media #{$query} { 
 		@content;
@@ -97,32 +97,64 @@ $xl: 1600;
 	}
 }
 
-.the-story {
-	> div:last-child {
-		margin-bottom: 40px;
-	}
-}
 .header-extension {
 	background-color: $main-dark-bg-color;
-	//clip: auto;
-	height: 55px;
-	//width: 18px;
-}
 
-/*
-.header-extension:after {
-	//width: 1800px;
-	//height: 55px;
+	height: 55px;
 }
-*/
 
 .about-text {
 	margin-top: 40px;
 }
 
-.about-text + img {
+//left bar box extend
+%about-left-box {
+	border: 1px solid $main-light-bg-color;
+	margin: 28px 20px;
+	padding: 24px 10%;
+}
+
+.about-left {
+	h2 {
+		text-align: center;
+	}
+	//social images
+	img.social {
+		width: 50px;
+		margin: 8px 20px 8px 10px;
+	}
+	.title {
+		text-align: center;
+		@extend %about-left-box;
+		h3 {
+			font-size: 20pt;
+			line-height: 20pt;
+			margin: 10px 0;
+		}
+		hr {
+			width: 90%;
+			margin: 0 auto;
+			display: block;
+			height: 1px;
+			border-top: 1px solid $main-light-bg-color;
+			padding: 0;
+		}
+	}
+	.links {
+		@extend %about-left-box;
+		h4 {
+			margin: 8px 0 0 0;
+		}
+	}
+}
+
+img.portrait {
 	padding: 26px 0 0 0;
 	margin: 0 auto;
+
+	@include breakpoint(m,0) {
+		margin-bottom: 26px;
+	}
 }
 
 .about-header {
@@ -154,6 +186,7 @@ $xl: 1600;
 	bottom: 0px;
 	
 	left: 0px;
+	/* other way to display the corner, works better for some phones */
 	//border-right: 14px solid $main-light-bg-color;
 	//border-top: 14px solid $main-light-bg-color;
 	//border-bottom: 14px solid white;
@@ -183,15 +216,11 @@ $xl: 1600;
 			padding-left: 0px !important;
 		}
 	div.css-flip {
-		//border: 2px solid black;
 		> div.flip {
-			//padding: 0 26px 0 26px !important;
 			> div {
 				border: 2px solid black;
 			}
 			.uk-card {
-				//position: relative;
-				//height: 110px;
 				
 				background-color: $main-bg-color;
 			}
@@ -289,14 +318,13 @@ $xl: 1600;
 			a {
 				color: complement($main-light-bg-color);
 				text-decoration: underline !important;
+				transition: linear .5s;
 			}
 			a:hover {
 				color: desaturate($main-light-bg-color,80%);
 				text-decoration: none !important;
 			}
-			@include breakpoint(m) {
-				//margin-top: 40px !important;
-			}
+			
 		}
 	}
 }
@@ -327,11 +355,13 @@ $xl: 1600;
 							background-color: $main-dark-bg-color;
 							
 							margin: 0 auto;
+						
 							a {
 
 								color: $main-light-bg-color !important;
 								font-weight: bold;
 								padding: 20px 26px 20px 26px;
+								transition: linear .5s;
 							}
 						}
 						li.uk-active {
@@ -339,6 +369,7 @@ $xl: 1600;
 							a {
 								color: white !important;
 								border-bottom: none;
+								transition: linear .5s;
 							}
 						}
 
@@ -370,6 +401,7 @@ $xl: 1600;
 							color: $main-light-bg-color !important;
 							font-weight: bold;
 							padding: 20px 16px 20px 26px;
+							transition: linear .5s;
 						}
 					}
 					li.uk-active {
@@ -408,11 +440,7 @@ $xl: 1600;
 				color: white !important;
 			}
 			
-			@include breakpoint(m) {
-				//position: relative;
-				//left: -175px;
-			}
-			@include breakpoint(xs) {
+			@include breakpoint(xs,0) {
 				margin-right: 40px;
 			}
 		}
@@ -502,6 +530,17 @@ $xl: 1600;
 				background-color: $main-light-bg-color;
 				padding-top: 80px;
 				padding-bottom: 40px;
+		}
+		div.skills {
+			@extend %padding-box;
+			padding-bottom: 40px;
+			padding-top: 40px;
+			background-color: $main-dark-bg-color;
+			@include breakpoint(0,640) {
+				img {
+					max-height: 70px;
+				}
+			}
 		}
 	}
 }
