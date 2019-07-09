@@ -109,6 +109,7 @@
 						<a href="https://www.twitter.com/thequestist" target="_blank"><img class="social" src="images/twitter.png">TheQuestist</a><br/>
 						<a href="https://www.facebook.com/thequestist" target="_blank"><img class="social" src="images/facebook.png">TheQuestist</a><br/>
 						<a href="https://www.instagram.com/tech_outdoorsy_guy" target="_blank"><img class="social" src="images/instagram.png">Tech_Outdoorsy_Guy</a><br/>
+						<a href="https://github.com/questist" target="_blank"><img class="social" src="images/github.png">Questist</a><br/>
 						<div class="links">
 							<a href="mailto:rotimi@rotimicreative.com">rotimi@rotimicreative.com</a><br/>
 							<h4>Websites:</h4>
@@ -241,7 +242,7 @@
 									<center><div class="skills">
 											<img src="images/skills/html-css.png"><img src="images/skills/jquery.png"><img src="images/skills/javascript.png">
 											<img src="images/skills/sass.png"><img src="images/skills/mysql.png"><img src="images/skills/python.png"><img src="images/skills/react.png">
-											<img src="images/skills/vue.png"><img src="images/skills/adobe.png"><img src="images/skills/cpp.png">
+											<img src="images/skills/vue.png"><img src="images/skills/adobe.png"><img src="images/skills/cpp.png"><img src="images/skills/php.png">
 									</div></center>
 							</li>
 							
@@ -276,297 +277,81 @@
 				</div>
 			</div>
 			<div class="uk-container uk-width-1-1 the-info">
-				<div class="uk-grid-large uk-flex uk-flex-center" uk-grid>
-					<div class="uk-width-2-4@s uk-width-2-5@m uk-width-4-5@l uk-width-1-5@xl">
-						<ul class="uk-tab-left" uk-switcher="connect: .portfolio-description; animation: uk-animation-slide-left-medium" uk-tab="media: @xl">
-							<li class="uk-active"><a href="#">Bruce C. Stevenson</a></li>
-							<li><a href="#">SV Family Therapy</a></li>
-							<li><a href="#">Judy G</a></li>
-							<li><a href="#">Viral Media Network</a></li>
-							<li><a href="#">Edwins Sweeping</a></li>
-						</ul>
+				<div class="uk-grid-large uk-flex uk-flex-center uk-child-width-1-3@l uk-child-width-1-2@s" uk-grid="masonry:true">
+					<div>
+						<div class="uk-card uk-card-default">
+							<div class="uk-card-media-top">
+								<a href="http://www.brucecstevenson.com" target="_blank"><img src="images/portfolio/bruce.jpg" alt="Bruce C. Stevensons Musician Website"></a>
+							</div>
+							<div class="uk-card-body">
+								<a href="http://www.brucecstevenson.com"><h4 class="uk-card-title">Bruce C. Stevenson</h4></a>
+								<p>A custom design built using Wordpress meant to cater to an older audience and
+									match the musicians aesthetic tastes. Featuring upcoming videos, albums and blog.
+								</p>
+							</div>
+						</div>
 					</div>
-					<div class="uk-width-2-4@s uk-width-1-1@m uk-width-2-5@l uk-width-3-5@xl">
-						<ul class="portfolio-description uk-switcher">
-							<li>
-
-								<div class="">
-									<div class="uk-width-expand">
-										<h3>Musician Bruce C. Stevenson's Website</h3>
-										<h4>About the Project</h4>
-										<div>
-											Bruce C. Stevenson had a website already, however, his marketer wanted to create a new design for the upcoming EP release and they also needed a new developer to manage it day to day. Since Bruce is a Musician and had his own specific aesthetic's in mind such as a Monochrome palette with bright colors interspersed to catch the eye, this was the perfect opportunity to offer a custom web design solution. I showed him a prototype and he loved it, and since he knew how he wanted it to look, the minor changes we made were easy to define. I also handled the blog and will be updating it monthly with music news with the help of one of his associates.
-
-										</div>
-										<h4>The Solution</h4>
-										<div>
-											Because the site had a Blog as the main dynamic portion we opted for a custom Wordpress theme built from a Vanilla Twenty-Sixteen theme. The content was already created but the layout was drastically different from his original site. Instead of using Bootstrap for responsive functionality I opted for UIKit to change the flavour of the development process.
-										</div>
-										<h4>Link</h4>
-										<div>
-											<a href="http://www.brucecstevenson.com">www.brucecstevenson.com</a>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li>
-
-								<div class="">
-
-									<div class="uk-width-expand">
-										<h3>SV Family Therapy</h3>
-										<h4>About the Project</h4>
-										<div>
-											I was pleased to do this website for Mindy Dirks PhD. She had only the images for the site ready, knowing that she wanted to stick with a theme of "hands". She left the rest up to me. I created three different prototypes. One with a multi-page design and two single page variations. She decided she liked the single page designs better. After developing and coding there were a few minor changes to be made. She was very pleased with the outcome and left me a great review on Thumbtack.
-
-										</div>
-										<h4>The Solution</h4>
-										<div>
-											I used Bootstrap because it is perfect for one-page responsive designs. We only needed the grid system because the other UI elements such as the fly-in image overlays were custom coded. The colors were chosen from a three-color palette with bright accents to appeal to families and children. In the future, we may be adding dynamic content to the site including some of Mindy's writing on subjects within family Psychology.
-										</div>
-										<h4>Link</h4>
-										<div>
-											<a href="http://www.svfamilytherapy.com">www.svfamilytherapy.com</a>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li>
-
-								<div class="">
-
-									<div class="uk-width-expand">
-										<h3>Judy Gittelsohn - Artist Website</h3>
-										<h4>About the Project</h4>
-										<div>
-											Judy was one of the first clients I worked with on web development. She wanted a site that would allow her to manage her art herself. Because she was active in the Palo Alto art scene with exhibitions going on regularly and had collector's willing to give her social proofing we decided to emphasize that on her website. The art portfolio was built to link the exhibitions and collectors together allowing people to see which art pieces were on display at any given time.
-
-										</div>
-										<h4>The Solution</h4>
-										<div>
-											I choose Couch CMS to use for the development of the site. It offered a tight integration between the backend data and the HTML allowing us to build the design in HTML and add tags which pulled in the data. The dashboard is fully customizable and easy to use allowing Judy to manage it herself. This project was released before Wordpress had the Gallery feature built in which may have changed the decision. None the less, it was a solid choice because the site was up and running in a week. I integrated bootstrap into the website for responsive functionality.
-										</div>
-										<h4>Link</h4>
-										<div>
-											<a href="http://www.judyg.com">www.judyg.com</a>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li>
-
-								<div class="">
-
-									<div class="uk-width-expand">
-										<h3>Viral Media Network Portfolio</h3>
-										<h4>About the Project</h4>
-										<div>
-											My long-time friend Sam Jack works with a network of Videographers and Actors. He has produced his own talk show as well as worked with Major Sports Leagues like the A's, 49ers and Giants. His company Viral Media Network had need of a new website and also had a new client, Charles Blades Barber Shop who wanted us to write their monthly blogroll on Men's Fashion and Grooming tips. I signed on to write the blog and redesign the website.
-
-										</div>
-										<h4>The Solution</h4>
-										<div>
-											This was a simple theme build with some custom UI design for the services and team pages. Sam already had a theme picked out and I imported the content from another blogging platform into the Wordpress theme. I collaborated with Sam on the custom UI elements and implemented them using jQuery.
-										</div>
-										<h4>Link</h4>
-										<div>
-											Currently, the design of the site has been changed, but you can view the screenshots below.
-										</div>
-									</div>
-								</div>
-							</li>
-							<li>
-
-								<div class="">
-
-									<div class="uk-width-expand">
-										<h3>Edwins Sweeping</h3>
-										<h4>About the Project</h4>
-										<div>
-											Edwin approached me about building a website for his business so he can be found on Google Business. We gathered the information
-											quickly leveraging through a standard open ended interview. The coding of the website took only about a day with some back and forth regarding styling and logo design.
-										</div>
-										<h4>The Solution</h4>
-										<div>
-											Since it is a service oriented business that only needed a website
-											that described and represented his business well but also allowed the contact information to be prominent we opted for a one page site with a background video.
-											There was mobile optimization to make the design work and for the background video play well on iPhones and Android.
-										</div>
-										<h4>Link</h4>
-										<div>
-											<a href="http://www.edwinssweeping.com">www.edwinssweeping.com</a>
-										</div>
-									</div>
-								</div>
-							</li>
-						</ul>
+					<div>
+						<div class="uk-card uk-card-default">
+							<div class="uk-card-media-top">
+								<a href="http://www.judyg.com" target="_blank"><img src="images/portfolio/judyg.jpg" alt="Judy G. Artist Website"></a>
+							</div>
+							<div class="uk-card-body">
+								<a href="http://www.judyg.com" target="_blank"><h4 class="uk-card-title">Artist Judy G.</h4></a>
+								<p>A custom design that has helped her promote her fine art online. Built to allow her to manage the site herself.
+								A CMS was used that allowed a dashboard for her and to connect the art with the exhibitions and collectors section.
+								</p>
+							</div>
+						</div>
 					</div>
-					<div class="uk-width-2-4@s uk-width-2-5@m uk-width-2-5@l uk-width-1-5@xl">
-						<ul class="portfolio-description uk-switcher">
-							<li class="uk-flex uk-flex-center">
-								<div class="tech-specs">
-									<div class="">
-										<h3>Tech Overview</h3>
-										HTML<br>
-										CSS<br>
-										LESS<br/>
-										jQuery<br>
-										UIKit<br>
-										Wordpress<br>
-										PHP
-									</div>
-
-								</div>
-							</li>
-							<li class="uk-flex uk-flex-center">
-								<div class="tech-specs">
-									<div class="">
-										<h3>Tech Overview</h3>
-										HTML<br>
-										CSS<br>
-										SASS<br/>
-										jQuery<br>
-										Bootstrap<br>
-									</div>
-
-								</div>
-							</li>
-							<li class="uk-flex uk-flex-center">
-								<div class="tech-specs">
-									<div class="">
-										<h3>Tech Overview</h3>
-										HTML<br>
-										CSS<br>
-										SASS<br/>
-										jQuery<br>
-										Bootstrap<br>
-										CouchCMS<br>
-									</div>
-
-								</div>
-							</li>
-							<li class="uk-flex uk-flex-center">
-								<div class="tech-specs">
-									<div class="">
-										<h3>Tech Overview</h3>
-										HTML<br>
-										CSS<br>
-										jQuery<br>
-										Wordpress<br>
-									</div>
-
-								</div>
-							</li>
-							<li class="uk-flex uk-flex-center">
-								<div class="tech-specs">
-									<div class="">
-										<h3>Tech Overview</h3>
-										HTML<br>
-										CSS<br>
-										SASS<br>
-										Javascript<br>
-										UIKit<br>
-									</div>
-
-								</div>
-							</li>
-						</ul>
+					<div>
+						<div class="uk-card uk-card-default">
+							<div class="uk-card-media-top">
+								<a href="https://www.svfamilytherapy.com/" target="_blank"><img src="images/portfolio/mindy.jpg" alt="Mindy Dirks Website"></a>
+							</div>
+							<div class="uk-card-body">
+								<a href="https://www.svfamilytherapy.com/" target="_blank"><h4 class="uk-card-title">SV Family Therapy</h4></a>
+								<p>A custom designed One Page website built for Psychologist Mindy Dirks to present to her prospective clients. She had a theme for 
+									pictures of "hands" and the UI was built around that.
+								</p>
+							</div>
+						</div>
 					</div>
-
-					<div class="uk-contiainer uk-width-1-1">
-						<ul class="portfolio-description uk-switcher">
-							<li>
-								<div class="uk-container uk-width-1-1 uk-flex uk-flex-middle uk-flex-center the-portfolio-images" >
-									<div class="uk-grid-small uk-child-width-1-4@xl uk-child-width-1-3@l uk-child-width-1-2@m uk-child-width-1-2@s" uk-lightbox="animation: slide" uk-grid="masonry:true">
-										<div>
-											<a href="images/portfolio/bruce-1.jpg" data-caption="Bruce Stevensons Homepage">
-												<img data-src="images/portfolio/bruce-1-thumb.jpg" alt="Bruce Stevensons homepage" uk-img>
-											</a>
-										</div>
-										<div>
-											<a href="images/portfolio/bruce-2.jpg" data-caption="Bruce Stevensons Discography">
-												<img data-src="images/portfolio/bruce-2-thumb.jpg" alt="Bruce Stevensons Discography" uk-img>
-											</a>
-										</div>
-										<div>
-											<a href="images/portfolio/Bruce-3.jpg" data-caption="Bruce Stevensons Blog">
-												<img data-src="images/portfolio/Bruce-3-thumb.jpg" alt="Bruce Stevensons Blog" uk-img>
-											</a>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="uk-container uk-width-1-1 uk-flex uk-flex-middle uk-flex-center the-portfolio-images" >
-									<div class="uk-grid-small uk-child-width-1-4@xl uk-child-width-1-3@l uk-child-width-1-2@m uk-child-width-1-2@s" uk-lightbox="animation: slide" uk-grid="masonry:true">
-										<div>
-											<a href="images/portfolio/mindy-dirks.jpg" data-caption="Mindy Dirks One Page Site">
-												<img data-src="images/portfolio/mindy-dirks-thumb.jpg" alt="Mindy Dirks One Page Site" uk-img>
-											</a>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="uk-container uk-width-1-1 uk-flex uk-flex-middle uk-flex-center the-portfolio-images" >
-									<div class="uk-grid-small uk-child-width-1-4@xl uk-child-width-1-3@l uk-child-width-1-2@m uk-child-width-1-2@s" uk-lightbox="animation: slide" uk-grid="masonry:true">
-										<div>
-											<a href="images/portfolio/judyg-1.jpg" data-caption="Judy Gittelsohns Homepage">
-												<img data-src="images/portfolio/judyg-1-thumb.jpg" alt="Judy Gittelsohns homepage" uk-img>
-											</a>
-										</div>
-										<div>
-											<a href="images/portfolio/judyg-2.jpg" data-caption="Judy Gittelsohns Art Portfolio">
-												<img data-src="images/portfolio/judyg-2-thumb.jpg" alt="Judy Gittlsohns Art Portfolio" uk-img>
-											</a>
-										</div>
-										<div>
-											<a href="images/portfolio/judyg-3.jpg" data-caption="Judy Gittelsohns In Situ">
-												<img data-src="images/portfolio/judyg-3-thumb.jpg" alt="Judy Gittelsohns In Situ" uk-img>
-											</a>
-										</div>
-										<div>
-											<a href="images/portfolio/judyg-4.jpg" data-caption="Judy Gittelsohns Pet Portraits">
-												<img data-src="images/portfolio/judyg-4-thumb.jpg" alt="Judy Gittelsohns Pet Portraits" uk-img>
-											</a>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="uk-container uk-width-1-1 uk-flex uk-flex-middle uk-flex-center the-portfolio-images" >
-									<div class="uk-grid-small uk-child-width-1-4@xl uk-child-width-1-3@l uk-child-width-1-2@m uk-child-width-1-2@s" uk-lightbox="animation: slide" uk-grid="masonry:true">
-										<div>
-											<a href="images/portfolio/viral-1.jpg" data-caption="Viral Media Network Homepage">
-												<img data-src="images/portfolio/viral-1-thumb.jpg" alt="Viral Media Network homepage" uk-img>
-											</a>
-										</div>
-										<div>
-											<a href="images/portfolio/viral-2.jpg" data-caption="Viral Media Network Services">
-												<img data-src="images/portfolio/viral-2-thumb.jpg" alt="Viral Media Network Services" uk-img>
-											</a>
-										</div>
-										<div>
-											<a href="images/portfolio/viral-3.jpg" data-caption="Viral Media Network Blog">
-												<img data-src="images/portfolio/viral-3-thumb.jpg" alt="Viral Media Network Blog" uk-img>
-											</a>
-										</div>
-
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="uk-container uk-width-1-1 the-portfolio-images">
-									<div class=" uk-grid-small uk-child-width-1-4@xl uk-child-width-1-3@l uk-child-width-1-2@m uk-child-width-1-2@s" uk-lightbox="animation: slide" uk-grid="masonry:true">
-										<div style="margin: 0 auto;">
-											<a href="images/portfolio/edwinssweeping-lrg.jpg" data-caption="Edwins Sweeping One Page Site">
-												<img data-src="images/portfolio/edwinssweeping-small.jpg" alt="Edwins Sweeping One Page Site" uk-img>
-											</a>
-										</div>
-									</div>
-								</div>
-							</li>
-						</ul>
+					<div>
+						<div class="uk-card uk-card-default">
+							<div class="uk-card-media-top">
+								<a href="https://www.edwinssweeping.com" target="_blank"><img src="images/portfolio/edwinssweeping.jpg" alt="Edwins Sweeping Website"></a>
+							</div>
+							<div class="uk-card-body">
+								<a href="https://www.edwinssweeping.com" target="_blank"><h4 class="uk-card-title">Edwins Sweeping</h4></a>
+								<p>A custom designed One Page website to promote Edwin's Street Sweeping Business.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="uk-card uk-card-default">
+							<div class="uk-card-media-top">
+								<a href="https://www.stemcelltherapy.directory/" target="_blank"><img src="images/portfolio/stemcell.jpg" alt="Stem Cell Therapy Directory Website"></a>
+							</div>
+							<div class="uk-card-body">
+								<a href="https://www.stemcelltherapy.directory/" target="_blank"><h4 class="uk-card-title">Stem Cell Therapy</h4></a>
+								<p>This is a Wordpress theme which updated with content by me.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="uk-card uk-card-default">
+							<div class="uk-card-media-top">
+								<a href="https://www.rosevilleweightlossclinic.com/" target="_blank"><img src="images/portfolio/roseville.jpg" alt="Stem Cell Therapy Directory Website"></a>
+							</div>
+							<div class="uk-card-body">
+								<a href="https://www.rosevilleweightlossclinic.com/" target="_blank"><h4 class="uk-card-title">Weight Loss Site</h4></a>
+								<p>This is a Wordpress theme which I implemented the base of graphics and added content which was later used to clone this Roseville weight loss website.
+								</p>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
