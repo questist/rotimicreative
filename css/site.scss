@@ -105,6 +105,8 @@ $xl: 1600;
 
 .about-text {
 	margin-top: 40px;
+	
+	
 }
 
 //left bar box extend
@@ -115,6 +117,16 @@ $xl: 1600;
 }
 
 .about-left {
+	a {
+		color: $main-dark-bg-color;
+		transition: linear .5s;
+		text-decoration: underline !important;
+	}
+	a:hover {
+		color: $main-light-bg-color;
+		text-decoration: none !important;
+	}
+
 	h2 {
 		text-align: center;
 	}
@@ -303,6 +315,15 @@ img.portrait {
 			text-align: center;
 			background-color: rgba(255,255,255,.6);
 			color: black;
+			a {
+				color: $main-dark-bg-color;
+				transition: linear .5s;
+				text-decoration: underline !important;
+			}
+			a:hover {
+				color: $main-light-bg-color;
+				text-decoration: none !important;
+			}
 		}
 		> div:last-child {
 			text-align: center;
@@ -329,121 +350,12 @@ img.portrait {
 	}
 }
 
+
 .the-portfolio {
 	div.the-info {
 	
 		padding-bottom: 40px;
 		padding-top: 40px;
-		
-		> div {
-			
-			> div:first-child {
-				background: none !important;
-				background-color: none !important;
-				@include breakpoint($min: 0, $max: $xl + px) {
-					ul.uk-tab::before {
-						border-bottom: 0px;
-					}
-					ul.uk-tab {
-						
-						margin: 0 auto;
-						padding-left: 0px;
-						background-color: $main-dark-bg-color;
-						li {
-							box-sizing: border-box;
-							padding-left: 0px;
-							background-color: $main-dark-bg-color;
-							
-							margin: 0 auto;
-						
-							a {
-
-								color: $main-light-bg-color !important;
-								font-weight: bold;
-								padding: 20px 26px 20px 26px;
-								transition: linear .5s;
-							}
-						}
-						li.uk-active {
-							border-bottom: 3px solid $main-light-bg-color;
-							a {
-								color: white !important;
-								border-bottom: none;
-								transition: linear .5s;
-							}
-						}
-
-						li:hover {
-
-							background-color: $main-light-bg-color;
-
-							a:hover {
-
-								color: $main-dark-bg-color !important;
-							}
-						}
-					}
-				}
-				ul.uk-tab-left::before {
-					border-left: none;
-				}
-				ul.uk-tab-left {
-					background: none !important;
-					background-color: none !important;
-					
-					li {
-						box-sizing: border-box;
-						
-						background-color: $main-dark-bg-color;
-						width: 98%;
-						a {
-							
-							color: $main-light-bg-color !important;
-							font-weight: bold;
-							padding: 20px 16px 20px 26px;
-							transition: linear .5s;
-						}
-					}
-					li.uk-active {
-						border-right: 3px solid $main-light-bg-color;
-						a {
-							color: white !important;
-							
-						}
-					}
-					
-					li:hover {
-						
-						background-color: $main-light-bg-color;
-						
-						a:hover {
-							
-							color: $main-dark-bg-color !important;
-						}
-					}
-				}
-			}
-		}
-	}
-}
-
-.portfolio-description {
-	li {
-		div.tech-specs {
-			background-color: $main-light-bg-color;
-			padding: 40px 20px;
-			margin-left: 40px;
-			width: 80%;
-			color: white;
-			
-			h3 {
-				color: white !important;
-			}
-			
-			@include breakpoint(xs,0) {
-				margin-right: 40px;
-			}
-		}
 	}
 }
 
