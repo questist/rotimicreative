@@ -8,33 +8,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
-	<title>Front End Developer Rotimi A. located in SJ Bay Area</title>
-	<meta name="description" content="The website of Web Developer Rotimi A. created to showcase work and aid in his career search in the field."/>
-	<!-- Thanks to David Walsh at https://davidwalsh.name/cssflip for the help on the toggle. Kudos! -->
-	<script>
-		var lastItem = null;
-		function toggleCard(item) {
-			if(lastItem === item) {
-				item.classList.toggle("hover")
-				lastItem = null
-				return
-			}
-			if(lastItem === null) {
-				lastItem = item
-				item.classList.toggle("hover");	
-			}
-			else{
-				lastItem.classList.toggle("hover")
-				
-				item.classList.toggle("hover");
-				lastItem = item
-			}
-			//console.log(item.classList)
-		}
-		
-	</script>
+	<title>Full Stack Developer Rotimi A. located in SJ Bay Area</title>
+	<meta name="description" content="The website of Full Stack Developer Rotimi A. created to showcase work and aid in his career search in the field."/>
+	
 	<link rel="stylesheet" type="text/css" href="css/site.css"/>
-	<script src="js/uikit.min.js"></script>
 	
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122578081-3"></script>
@@ -45,12 +22,13 @@
 
 	  gtag('config', 'UA-122578081-3');
 	</script>
-
+	
+	
 </head>
 
 <body>
-	<div class="mobile-nav uk-position-fixed uk-width-1-1" uk-viewport-height>
-		<div class="uk-flex uk-flex-around uk-position-bottom uk-visible uk-hidden@m uk-width-1-1 uk-position-fixed">
+	<div class="mobile-nav">
+		<div class="uk-flex uk-flex-around uk-visible uk-hidden@m uk-width-1-1 uk-position-fixed">
 			<div class="">
 				
 				<a href="#about" uk-scroll><img data-src="images/menu_about.png" alt="" uk-img></a>
@@ -69,23 +47,34 @@
 			</div>
 		</div>
 	</div>
-	<div class="uk-width-small uk-position-fixed uk-visible@m fixed-bar" uk-height-viewport>
-						<div class="uk-position-fixed uk-height-1-1 nav-bar">
-							<div class="nav-about">
-								<a href="#about" uk-scroll><img data-src="images/about.png" width="150" height="150" alt="About" uk-img></a>
-							</div>
-							<div class="nav-resume">
-								<a href="#positions" uk-scroll><img data-src="images/positions.png" width="150" height="150" alt="About" uk-img></a>
-							</div>
-							<div class="nav-portfolio">
-								<a href="#portfolio" uk-scroll><img data-src="images/portfolio.png" width="150" height="150" alt="About" uk-img></a>
-							</div>
-							<div class="nav-projects">
-								<a href="#projects" uk-scroll><img data-src="images/projects.png" width="150" height="150" alt="About" uk-img></a>
-							</div>
-							<div class="nav-words">
-								<a href="#words" uk-scroll><img data-src="images/words.png" width="150" height="150" alt="About" uk-img></a>
-							</div>
+	<div class="nav-bar uk-width-small uk-position-fixed uk-visible@m fixed-bar" uk-height-viewport>
+						<div class="uk-position-fixed uk-height-1-1 ">
+							<a href="#about" uk-scroll><div class="nav-about">
+								<img class="menu-icon" style="top: 99px; left: 97px;" data-src="images/menu_icon_about.png" width="51" height="48" alt="" uk-scrollspy="cls:uk-animation-scale-up;delay: 1000" uk-img>
+								<img class="menu-pic" data-src="images/menu_photo_about.png" width="119" height="116" alt="" uk-scrollspy="cls: uk-animation-slide-left; delay: 1000" uk-img>
+								<img data-src="images/menu_bg_about.png" width="150" height="150" alt="About" uk-img>
+								
+							</div></a>
+							<a href="#positions" uk-scroll><div class="nav-resume">
+								<img class="menu-icon" style="top: 250px; left: 98px;" data-src="images/menu_icon_positions.png" width="50" height="47" alt="" uk-scrollspy="cls:uk-animation-scale-up;delay: 1125" uk-img>
+								<img class="menu-pic" data-src="images/menu_photo_positions.png" width="119" height="116" alt="" uk-scrollspy="cls: uk-animation-slide-left; delay: 1125" uk-img>
+								<img data-src="images/menu_bg_positions.png" width="150" height="150" alt="Positions" uk-img>
+							</div></a>
+							<a href="#portfolio" uk-scroll><div class="nav-portfolio">
+								<img class="menu-icon" style="top: 400px; left: 97px;" data-src="images/menu_icon_portfolio.png" width="51" height="48" alt="" uk-scrollspy="cls:uk-animation-scale-up;delay: 1250" uk-img>
+								<img class="menu-pic" data-src="images/menu_photo_portfolio.png" width="119" height="116" alt="" uk-scrollspy="cls: uk-animation-slide-left; delay: 1250" uk-img>
+								<img data-src="images/menu_bg_portfolio.png" width="150" height="150" alt="Portfolio" uk-img>
+							</div></a>
+							<a href="#projects" uk-scroll><div class="nav-projects">
+								<img class="menu-icon" style="top: 550px; left: 97px;" data-src="images/menu_icon_projects.png" width="51" height="48" alt="" uk-scrollspy="cls:uk-animation-scale-up;delay: 1350" uk-img>
+								<img class="menu-pic" data-src="images/menu_photo_projects.png" width="119" height="116" alt="" uk-scrollspy="cls: uk-animation-slide-left; delay: 1350" uk-img>
+								<img data-src="images/menu_bg_projects.png" width="150" height="150" alt="Projects" uk-img>
+							</div></a>
+							<a href="#words" uk-scroll><div class="nav-words">
+								<img class="menu-icon" style="top: 700px; left: 97px;" data-src="images/menu_icon_words.png" width="51" height="48" alt="" uk-scrollspy="cls:uk-animation-scale-up;delay: 1450" uk-img>
+								<img class="menu-pic" data-src="images/menu_photo_words.png" width="119" height="116" alt="About" uk-scrollspy="cls: uk-animation-slide-left; delay: 1450" uk-img>
+								<img data-src="images/menu_bg_words.png" width="150" height="150" alt="Words" uk-img>
+							</div></a>
 						</div>
 					</div>
 	
@@ -95,26 +84,25 @@
 		<div class="uk-container">
 			<div class="uk-grid-large uk-child-width-1-2@m uk-child-width-1-1@s uk-flex-center the-story" uk-grid>
 				<div class="uk-flex-last@m">
-					<img src="images/RotimiCreativeLogo.png" alt="Rotimi Creative Logo">
+					<img src="images/RotimiCreativeLogo-fullstack.jpg" alt="Rotimi Creative Logo">
 					<div class="about-header"><h2 class="uk-position-center-left">About</h2></div>
-					<p class="about-text">Welcome, this website is to showcase the current work of Front End Web Developer Rotimi A. He is passionate about software development and design. He recently graduated with a Bachelors of Science in Cognitive Science with a Human Computer Interaction focus. He has been working professionally building websites for 4 years but has been learning programming since 1999 when he developed his first C++ application, a Win32 GUI application that indexed CD's so a large library of data CD's could be searched and indexed without physically inserting each CD.</p>
-					<center><img class="portrait" data-src="images/photo1.jpg" alt="Rotimi's Photo" uk-img></center>
+					<p class="about-text">Welcome, this website is to showcase the current work of Full Stack Developer Rotimi A. He is passionate about software development and design. He recently graduated with a Bachelors of Science in Cognitive Science with a Human Computer Interaction focus. He has been working professionally building websites for 4 years but has been learning programming since 1999 when he developed his first C++ application, a Win32 GUI application that indexed CD's so a large library of data CD's could be searched and indexed without physically inserting each CD. This was around the time of Napster, so I hoped it would be useful to someone. Time's have changed, we now stream music.</p>
+					<center><img class="portrait" data-src="images/rotimi-portrait.jpg" alt="Rotimi's Photo" uk-img></center>
 				</div>
 				<div class="about-left">
 					
 					<p class="about-text">
-						<h2>"We are in the business of making products not making apps"</h2>
-						<div class="title"><h3>Front End Developer</h3></div>
-						<a href="https://www.linkedin.com/in/rotimicreative/" target="_blank"><img class="social" src="images/linkedin.png">RotimiCreative</a><br/>
-						<a href="https://www.twitter.com/thequestist" target="_blank"><img class="social" src="images/twitter.png">TheQuestist</a><br/>
-						<a href="https://www.facebook.com/thequestist" target="_blank"><img class="social" src="images/facebook.png">TheQuestist</a><br/>
-						<a href="https://www.instagram.com/tech_outdoorsy_guy" target="_blank"><img class="social" src="images/instagram.png">Tech_Outdoorsy_Guy</a><br/>
-						<a href="https://github.com/questist" target="_blank"><img class="social" src="images/github.png">Questist</a><br/>
+						<h2>"A True Technoligist, Bringing Creativity and an Explorative Attitude to Making Digital Products"</h2>
+						<div class="title"><h3>Full Stack Developer</h3></div>
+						<a href="https://www.linkedin.com/in/rotimicreative/" target="_blank"><img class="social" src="images/linkedin.png"></a><br/>
+						<a href="https://www.twitter.com/thequestist" target="_blank"><img class="social" src="images/twitter.png"></a><br/>
+						<a href="https://www.facebook.com/thequestist" target="_blank"><img class="social" src="images/facebook.png"></a><br/>
+						<a href="https://www.instagram.com/tech_outdoorsy_guy" target="_blank"><img class="social" src="images/instagram.png"></a><br/>
+						<a href="https://github.com/questist" target="_blank"><img class="social" src="images/github.png"></a><br/>
 						<div class="links">
 							<a href="mailto:rotimi@rotimicreative.com">rotimi@rotimicreative.com</a><br/>
 							<h4>Websites:</h4>
-							Questist - Technology Consulting - coming soon<br/>
-							<a href="https://www.unmotive.com" target="_blank">Unmotive Podcast - coming soon</a><br/>
+							<a href="https://www.unmotive.com" target="_blank">Unmotive Podcast</a><br/>
 						</div>
 					</p>
 				</div>
@@ -132,7 +120,7 @@
 
 						</div>
 						<div class="back uk-card uk-width-1-1 uk-height-small">
-							<div class="uk-position-center">This site is dedicated to helping Rotimi find a full-time position as a Front End Developer. Though hopefully in the near future I will be a Full Stack Dev.</div>
+							<div class="uk-position-center">This site is dedicated to helping Rotimi find a full-time position as a Full Stack Developer. Currently, I am employed as a Front End Dev</div>
 
 						</div>
 					</div>
@@ -168,7 +156,7 @@
 			<div class="uk-grid-large uk-child-width-1-2@l uk-child-width-1-1@m uk-flex-center" uk-grid>
 				<div class="left-q-info" uk-scrollspy="cls: uk-animation-slide-left; repeat: false; delay: 150">
 					<img class="uk-padding-small" data-src="images/questist-logo-transparent.png" alt="About" uk-img><br/>
-					I work on website Front End Development consulting through Questist LLC. I have an extended group of project managers, videographers, software developers and marketers who can provide any media service you require. If you would like to contact me regarding for a phone consultation please email <a href="emailto:sales@questist.com">sales@questist.com</a> or call (650)385-8338.<br>
+					I work on website Full Stack Development consulting through Questist LLC. I have an extended group of project managers, videographers, software developers and marketers who can provide any media service you require. If you would like to contact me regarding for a phone consultation please email <a href="emailto:sales@questist.com">sales@questist.com</a> or call (650)385-8338.<br>
 				</div>
 				<div class="right-q-info" uk-scrollspy="cls: uk-animation-slide-right; repeat: false; delay: 150">
 					<img class="uk-inline" data-src="images/custom-white-arrow.png" width="75" height="75" alt="arrow" uk-img>
@@ -226,7 +214,7 @@
 								<div class="">
 
 									<div class="goals">
-									  I am a Web Developer who understands back-end and front-end development. I have experience with both Vue.js and React. My focus is currently on Front-End development through becoming more proficient in Javascript. I would like to explore Back-End technologies through Node.js and Python to become a Full-Stack Developer. The current state of a thriving community of developers and frameworks is interesting because there is always something fresh and new to apply to solve common problems. I have an eye for design and am a contributor to a startup still in the development phase.
+									  I am a Web Developer who understands back-end and front-end development. I have experience with Vue.js, React and PHP MVC frameworks. My focus is currently on Front-End development as that is my current title at my current employer and my most recent work experience was freelance Web Development. I am well versed in OOP concepts, I can pick up new technologies and API's very quickly. I am also very knowledgable about web application structure. I will be brushing up on my C++ skills on my own time in order to explore the interesction of compiled apps built in C++ and Web Technologies. The current state of a thriving community of developers and frameworks is interesting because there is always something fresh and new to apply to solve common problems. I have an eye for design and am a contributor to a startup still in the development phase.
 									</div>
 
 									<div class="experience uk-inline">
@@ -249,7 +237,16 @@
 								<div class="">
 
 									<div class="skills">
-									  I have been coding since 1999 with in depth C++ experience. I also started with HTML before CSS was around back in 2001. Since then I have used a multitude of coding languages like Python and PHP. In Python I have done some statistical analysis with data and with PHP I have built websites using CodeIgniter MVC and also built a custom theme for one of my clients using Wordpress. I have used jQuery for a few live projects and have continued learning Vue.js and React. Currently, my blog will(is) implemented in Vue.js and I am working with a startup to build a React Native app. I feel there will still be some congruency between the web and DevOps so I will continue to brush up on my C++ in the near future as well as continue my experience and knowledge in Full Stack Development. I currently work for a marketing company doing HTML/CSS and Wordpress work. Because of the nature of their workflow I don't get to code as much as I expected so I am looking for a new position that will allow me to fulfill the role of Front End Developer to a greater capacity.
+									  <ul>
+										  <li>At my current employer I am responsible for specific aspects of a marketing campaign for one account that has brought in over $150,000 in revenue in a 6 month period. The campaign has brought in more profit than many past years of business.</li>
+										  <li>Made Design Decisions for website design that helped sell $5,000 paintings for a client</li>
+										  <li>Part of the Internet Marketing team of a musician whose Album was featured as #2 on an internet Music Chart - Roots Music Report</li>
+										  <li>During my time writing a monthly long form Blog for a Men's Barber Shop in Oakland they were featured in the nationally syndicated magazine, Ebony, as one of the top ten barbershops in the USA</li>
+										  <li>BS Degree in Cognitive Science in 2018 which gives me a unique perspective to the design of applications and business landscape</li>
+										  <li>I started coding in C++ and HTML in 1999</li>
+										  <li>I have been watching the internet landscape from the perspective of a Technologist since 1999</li>
+										  <li>I have quickly learned new frameworks for application in live customer projects as a Freelancer</li>
+										  
 									</div>
 								</div>
 
@@ -335,7 +332,7 @@
 							</div>
 							<div class="uk-card-body">
 								<a href="https://www.stemcelltherapy.directory/" target="_blank"><h4 class="uk-card-title">Stem Cell Therapy</h4></a>
-								<p>This is a Wordpress theme which updated with content by me.
+								<p>This is a Wordpress theme which implemented for my current employer.
 								</p>
 							</div>
 						</div>
@@ -343,11 +340,11 @@
 					<div>
 						<div class="uk-card uk-card-default">
 							<div class="uk-card-media-top">
-								<a href="https://www.rosevilleweightlossclinic.com/" target="_blank"><img src="images/portfolio/roseville.jpg" alt="Stem Cell Therapy Directory Website"></a>
+								<a href="https://www.demandboost.website/templates/weightloss/two/" target="_blank"><img src="images/portfolio/roseville.jpg" alt="Stem Cell Therapy Directory Website"></a>
 							</div>
 							<div class="uk-card-body">
-								<a href="https://www.rosevilleweightlossclinic.com/" target="_blank"><h4 class="uk-card-title">Weight Loss Site</h4></a>
-								<p>This is a Wordpress theme which I implemented the base of graphics and added content which was later used to clone this Roseville weight loss website.
+								<a href="https://www.demandboost.website/templates/weightloss/two/" target="_blank"><h4 class="uk-card-title">Weight Loss Site</h4></a>
+								<p>This is a Wordpress theme which I implemented for my current employer. I created the base of graphics, modified the theme and added content which was later used to clone clients websites. The finished cloned sites can't be shown for business reasons.
 								</p>
 							</div>
 						</div>
@@ -437,6 +434,31 @@
 			</div>
 		</div>
 	</div>
-	
+
+		<!-- Thanks to David Walsh at https://davidwalsh.name/cssflip for the help on the toggle. Kudos! -->
+	<script>
+			var lastItem = null;
+			function toggleCard(item) {
+				if(lastItem === item) {
+					item.classList.toggle("hover")
+					lastItem = null
+					return
+				}
+				if(lastItem === null) {
+					lastItem = item
+					item.classList.toggle("hover");	
+				}
+				else{
+					lastItem.classList.toggle("hover")
+					
+					item.classList.toggle("hover");
+					lastItem = item
+				}
+				//console.log(item.classList)
+			}
+			
+		</script>
+	<script src="js/uikit.min.js"></script>
 </body>
+
 </html>

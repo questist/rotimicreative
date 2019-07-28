@@ -68,11 +68,25 @@ $xl: 1600;
 .uk-transition-slide-top {
 	background: rgba(0,0,0,0.0) !important;
 }
+
+body {
+	position: relative;
+}
+
+@include breakpoint(0,$m ) {
+	.uk-section {
+		margin-top: 40px;
+	}
+}
 .mobile-nav {
 	//That wasn't fun, it was something different
 	//height: 100vh !important;
 	z-index: 90;
-	
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 64px;
 	> div {
 		
 		background-image: url(../images/menu_bar.png);
@@ -88,6 +102,17 @@ $xl: 1600;
 			}
 		}
 	}
+}
+.nav-bar {
+	width: 150px;
+	background-color: $main-dark-bg-color;
+}
+img.menu-pic {
+	position: absolute;
+}
+
+img.menu-icon {
+	position: fixed;
 }
 
 .uk-section {
@@ -204,13 +229,15 @@ img.portrait {
 	//border-bottom: 14px solid white;
 	//border-left: 14px solid white;
 }
-
-.nav-bar {
+/*
+hidden because it breaks the nav when screen is too short
+.nav-bar > div {
 	background-color: $main-dark-bg-color;
 	left: 0px !important;
 	overflow-y: auto;
 	overflow-x: hidden;
-}
+	scrollbar-width: none;
+}*/
 
 .nav-divider {
 	background-color: $main-dark-bg-color;
@@ -476,14 +503,14 @@ img.portrait {
 	.project-card-grid {
 		
 		margin-left: 0px !important;
-		
 		> div {
 			
 			padding-right: 40px;
 			padding-left: 40px;
 			
 			@include breakpoint(0, $l) {
-				padding-left: 0px !important;
+				padding-left: 10px !important;
+				padding-right: 10px !important;
 			}
 			
 			.uk-card {
