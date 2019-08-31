@@ -11,7 +11,7 @@
 	<title>Full Stack Developer Rotimi A. located in SJ Bay Area</title>
 	<meta name="description" content="The website of Full Stack Developer Rotimi A. created to showcase work and aid in his career search in the field."/>
 	
-	<link rel="stylesheet" type="text/css" href="css/site.css?v=1.1"/>
+	<link rel="stylesheet" type="text/css" href="css/site.css?v=1.2"/>
 	
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122578081-3"></script>
@@ -28,7 +28,7 @@
 
 <body>
 	<div class="mobile-nav">
-		<div class="uk-flex uk-flex-around uk-visible uk-hidden@m uk-width-1-1 uk-position-fixed">
+		<div class="uk-flex uk-flex-around uk-visible uk-hidden@m uk-width-1-1 uk-position-fixed" uk-scrollspy-nav="closet: a; scroll: true;cls:uk-active-mobile">
 			<div class="">
 				
 				<a href="#about" uk-scroll><img data-src="images/menu_about.png" alt="" uk-img></a>
@@ -48,16 +48,16 @@
 		</div>
 	</div>
 	<div class="nav-bar uk-width-small uk-position-fixed uk-visible@m fixed-bar" uk-height-viewport>
-						<div class="uk-position-fixed uk-height-1-1 ">
+						<div class="uk-position-fixed uk-height-1-1 uk-nav" uk-scrollspy-nav="closest: a; scroll: true;">
 							<a href="#about" uk-scroll><div class="nav-about">
-								<img class="menu-icon" style="top: 99px; left: 97px;" data-src="images/menu_icon_about.png" width="51" height="48" alt="" uk-scrollspy="cls:uk-animation-scale-up;delay: 1000" uk-img>
+								<img class="menu-icon"  style="top: 99px; left: 97px;" data-src="images/menu_icon_about.png" width="51" height="48" alt="" uk-scrollspy="cls:uk-animation-scale-up;delay: 1000" uk-img>
 								<img class="menu-pic" data-src="images/menu_photo_about.png" width="119" height="116" alt="" uk-scrollspy="cls: uk-animation-slide-left; delay: 1000" uk-img>
 								<img data-src="images/menu_bg_about.png" width="150" height="150" alt="About" uk-img>
 								
 							</div></a>
 							<a href="#positions" uk-scroll><div class="nav-resume">
 								<img class="menu-icon" style="top: 250px; left: 98px;" data-src="images/menu_icon_positions.png" width="50" height="47" alt="" uk-scrollspy="cls:uk-animation-scale-up;delay: 1125" uk-img>
-								<img class="menu-pic" data-src="images/menu_photo_positions.png" width="119" height="116" alt="" uk-scrollspy="cls: uk-animation-slide-left; delay: 1125" uk-img>
+								<img class="menu-pic" id="resume-image" data-src="images/menu_photo_positions.png" width="119" height="116" alt="" uk-scrollspy="cls: uk-animation-slide-left; delay: 1125" uk-img>
 								<img data-src="images/menu_bg_positions.png" width="150" height="150" alt="Positions" uk-img>
 							</div></a>
 							<a href="#portfolio" uk-scroll><div class="nav-portfolio">
@@ -72,7 +72,7 @@
 							</div></a>
 							<a href="#words" uk-scroll><div class="nav-words">
 								<img class="menu-icon" style="top: 700px; left: 97px;" data-src="images/menu_icon_words.png" width="51" height="48" alt="" uk-scrollspy="cls:uk-animation-scale-up;delay: 1450" uk-img>
-								<img class="menu-pic" data-src="images/menu_photo_words.png" width="119" height="116" alt="About" uk-scrollspy="cls: uk-animation-slide-left; delay: 1450" uk-img>
+								<img class="menu-pic" id="final-animation" data-src="images/menu_photo_words.png" width="119" height="116" alt="About" uk-scrollspy="cls: uk-animation-slide-left; delay: 1450" uk-img>
 								<img data-src="images/menu_bg_words.png" width="150" height="150" alt="Words" uk-img>
 							</div></a>
 						</div>
@@ -457,7 +457,25 @@
 			</div>
 		</div>
 	</div>
+	<script src="js/uikit.min.js">
+	
+		function navInView(navDesktopImage,navDesktopIcon) {
+			document.getElementById(navDesktopImage).classList.toggle("nav-fade-out");
+			document.getElementById(navDesktopIcon).classList.toggle("nav-fade-out");
+			alert("in");
+		}
 
+		function navInView(navDesktopImage,navDesktopIcon,navMobile) {
+			document.getElementById(navDesktopImage).classList.toggle("nav-fade-out");
+			document.getElementById(navDesktopIcon).classList.toggle("nav-fade-out");
+			alert("out");
+		}
+
+		var resume = UIkit.scrollspy("#positions");
+		UIkit.scrollspy.on('#positions','inview', navInView("resume-image","resume-icon",null));
+
+		UIkit.scrollspy.on('.#positions','outview',navOutView("resume-image","resume-icon",null));
+	</script>
 		<!-- Thanks to David Walsh at https://davidwalsh.name/cssflip for the help on the toggle. Kudos! -->
 	<script>
 			var lastItem = null;
@@ -480,8 +498,25 @@
 				//console.log(item.classList)
 			}
 			
+			setTimeout(removeAnimation,1450);
+
+			function removeAnimation() {
+				
+				var icons = document.getElementsByClassName("menu-icon");
+				var images = document.getElementsByClassName("menu-pic");
+			
+				for(i = 0; i < icons.length; i++) {
+					icons[i].classList.toggle("uk-animation-scale-up");
+					
+				}
+				for(i = 0;i < images.length; i++) {
+					images[i].classList.toggle("uk-animation-slide-left");
+					
+				}
+
+			}	
 		</script>
-	<script src="js/uikit.min.js"></script>
+	
 </body>
 
 </html>

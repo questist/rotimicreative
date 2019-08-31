@@ -99,6 +99,7 @@ body {
 				top: 0px;
 				width: 64px;
 				height: 65px;
+				transition: .3s linear;
 			}
 		}
 	}
@@ -109,10 +110,24 @@ body {
 }
 img.menu-pic {
 	position: absolute;
+	transition: .3s linear;
 }
 
 img.menu-icon {
 	position: fixed;
+	transition: .3s linear;
+}
+
+.uk-active-mobile img {
+	opacity: .7;
+}
+.uk-active img.menu-pic {
+	opacity: .4;
+}
+
+.uk-active img.menu-icon {
+	opacity: .4;
+
 }
 
 .uk-section {
@@ -298,7 +313,9 @@ hidden because it breaks the nav when screen is too short
 		backface-visibility: hidden;
 		-webkit-backface-visibility: hidden;
 		-webkit-perspective: 0;
+		perspective: 0;
 		-webkit-transform: translate(0,0,0);
+		transform: translate(0,0,0);
 		visibility: visible;
 		position: absolute;
 		top: 0;
